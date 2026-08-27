@@ -1,0 +1,14 @@
+{
+  "name": "fb-location-scrapper",
+  "version": "1.0.0",
+  "description": "Facebook Marketplace location autocomplete scraper",
+  "type": "module",
+  "main": "scraper.js",
+  "scripts": {
+    "start": "node scraper.js"
+  },
+  "dependencies": {
+    "csv-parse": "^7.0.2",
+    "playwright": "^1.62.0"
+  }
+}

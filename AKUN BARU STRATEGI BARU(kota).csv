@@ -1,0 +1,533 @@
+SURABAYA,,JOMBANG,,KEDIRI,,BLITAR,,PACITAN,,GRESIK,,TULUNGAGUNG,,SIDOARJO,,LAMONGAN,,PONOROGO,,MALANG,,NGANJUK,,TRENGGALEK,,MOJOKERTO
+LOKASI,,LOKASI,,LOKASI,,LOKASI,,LOKASI,,LOKASI,,LOKASI,,LOKASI,,LOKASI,,LOKASI,,LOKASI,,LOKASI,,LOKASI,,LOKASI
+60111,,61411,,64111,,66113,,63511,,61111,,66211,,"(( Tambakcemandi )), Indonesia",,62211,,63411,,"Ampel, East Java ",,Babadan,,66311,,61311
+60112,,61412,,64112,,66114,,63512,,61112,,66212,,"Badas, Jawa Timur, Indonesia",,62212,,63412,,"Ampelantuk, East Java",,"Babadan, Patianrowo",,66312,,61312
+60113,,61413,,64113,,66115,,63513,,61113,,66213,,"Balanggabus, East Java",,62213,,63413,,"Ampelgading, Jawa Timur, Indonesia",,"Bagor, East Java",,66313,,61313
+60114,,61415,,64114,,66116,,63514,,61114,,66214,,"Balepanjang, East Java",,62214,,63414,,"Ardimulyo, Jawa Timur, Indonesia",,Baleturi,,66314,,61314
+60115,,61416,,64115,,66117,,63515,,61115,,66215,,"Balongbendo, Jawa Timur, Indonesia",,62215,,63415,,"Ardirejo, Jawa Timur, Indonesia",,Balongpacung,,66315,,61315
+60116,,61417,,64116,,66121,,63516,,61116,,66216,,"Balongdowo, Jawa Timur, Indonesia",,62216,,63416,,"Ardowinangun, East Java",,Balongrejo,,66316,,61316
+60117,,61418,,64117,,66122,,63518,,61117,,66217,,"Bangeran, East Java",,62217,,63417,,"Argosuko, East Java",,Banaran,,66317,,61317
+60118,,61419,,64118,,66124,,63552,,61118,,66218,,"Bangsri, East Java",,62218,,63418,,"Arjosari, Jawa Timur, Indonesia",,Banaran ,,66318,,61318
+60119,,61451,,64119,,66125,,63553,,61119,,66219,,"Banjarkemantren, East Java",,62252,,63419,,Arjowinangun,,Banaran Kulon,,66319,,61319
+60121,,61452,,64121,,66126,,63554,,61121,,66252,,"Banjarkemuning, East Java",,62253,,63451,,"Badut, East Java",,Banaran Wetan,,66351,,61321
+60122,,61453,,64122,,66133,,63561,,61122,,66253,,"Bantengan, East Java",,62254,,63453,,"Bagor 1, East Java",,Bandung ,,66352,,61322
+60123,,61454,,64123,,66134,,63571,,61123,,66254,,"Bareng, Jawa Timur, Indonesia",,62255,,63454,,"Bagor Dua, East Java",,"Bangsri, Kertosono",,66361,,61323
+60124,,61455,,64124,,66135,,63572,,61124,,66261,,"Barengkrajan, Jawa Timur, Indonesia",,62256,,63455,,Bagor Kulon,,Banjaranyar,,66362,,61324
+60125,,61456,,64125,,66136,,63573,,61151,,66262,,"Bendotrelek, East Java",,62257,,63456,,Bakalan Krajan,,Banjarejo   ,,66363,,61325
+60126,,61457,,64126,,66137,,63581,,61152,,66263,,"Besuk 2, East Java",,62261,,63461,,"Balearjo, East Java",,Banjarsari ,,66364,,61326
+60127,,61461,,64127,,66151,,63582,,61153,,66271,,"Besuk, East Java",,62262,,63462,,"Balearjosari, Jawa Timur, Indonesia",,"Bareng, Sawahan",,66365,,61327
+60128,,61462,,64128,,66152,,63583,,61154,,66273,,"Bogem, Jawa Timur, Indonesia",,62263,,63463,,"Bambang, Jawa Timur, Indonesia",,Begadung,,66371,,61328
+60129,,61463,,64129,,66153,,63584,,61155,,66274,,"Bogempinggir, East Java",,62264,,63464,,Bandung Rejosari,,Bendolo,,66372,,61351
+60131,,61471,,64131,,66154,,"Bandar, Jawa Timur, Indonesia",,61156,,66275,,"Boro, Jawa Timur, Indonesia",,62265,,63471,,"Bandungrejo, Jawa Timur, Indonesia",,Betet,,66373,,61352
+60132,,61473,,64132,,66155,,Cangkring,,61162,,66281,,"Bringinbendo, East Java",,62271,,63472,,"Banggi, East Java",,"Blitaran, Sukomoro",,66381,,61353
+60133,,61474,,64133,,66161,,Cemeng,,61171,,66283,,"Bringin-kulon, East Java",,62272,,63473,,Bareng,,Bukur,,66382,,61354
+60134,,61475,,64134,,66163,,Cokrokembang,,61172,,66284,,"Bringin-wetan, East Java",,62273,,63474,,"Baru, East Java",,Bulu,,"Bendoagung, Jawa Timur, Indonesia",,61361
+60135,,61476,,64135,,66171,,Dadapan,,61173,,66291,,"Bulusidokari, Jawa Timur, Indonesia",,62274,,63475,,"Baturetno, Jawa Timur, Indonesia",,Candirejo,,"Doerenan, East Java",,61362
+60136,,61481,,64136,,66172,,Dersono,,61174,,66292,,"Cari, East Java",,62275,,63481,,"Bawang, East Java",,Cengkok,,"Dongko, Jawa Timur, Indonesia",,61363
+60137,,61482,,64137,,66173,,Gasang,,61175,,66293,,"Damarsi Kidul, East Java",,62281,,63482,,"Bedali 1, East Java",,Cerme,,Gembleh,,61364
+60138,,61483,,64138,,66174,,Gawang,,61176,,Bago,,"Damarsi Lor, East Java",,62282,,63491,,"Bedali Dua, East Java",,Dadapan,,"Jarakan, Jawa Timur, Indonesia",,61371
+60141,,61484,,64139,,66181,,Gayuhan,,61177,,Bangoan,,"Damarsi Wetan, East Java",,62283,,63492,,"Bedali, Jawa Timur, Indonesia",,Dawuhan ,,"Kacangan, Jawa Timur, Indonesia",,61372
+60142,,61485,,64151,,66182,,Gedangan,,61181,,"Boro, Tulungagung",,"Damarsi, East Java",,62284,,63493,,"Bedaliledok, East Java",,"Drenges, Kertosono",,Karangsoko,,61373
+60143,,Alang Alang Caruban,,64152,,66183,,Gedompol,,61182,,Botoran,,"Dukuh Tengah, East Java",,62291,,"Badegan, Jawa Tengah, Indonesia",,"Beru, Jawa Timur, Indonesia",,Duren,,"Munjungan, Jawa Timur, Indonesia",,61374
+60144,,Asem Gede,,64153,,66184,,Gegeran,,Abar-Abir,,"Boyolangu, Jawa Timur, Indonesia",,"Dukuhsari, Jawa Timur, Indonesia",,62292,,"Bajang, Jawa Timur, Indonesia",,"Binangun, Jawa Timur, Indonesia",,Gampeng,,Ngadirengga,,61375
+60145,,"Badang, Ngoro",,64154,,66186,,Gemaharjo,,"Abar-abir, East Java",,Bulusari ,,"Gedangan, Jawa Timur, Indonesia",,62293,,Bangunsari,,"Boronggondang, East Java",,Gondang,,Ngantru,,61381
+60151,,"Badas, Sumobito",,64155,,66187,,Gembong,,Ambeng Ambeng Watangrejo,,"Campurdarat, Jawa Timur, Indonesia",,"Gelam, Jawa Timur, Indonesia",,"Babad, East Java",,Banyudono,,"Boronglalang, East Java",,Jatirejo,,Ngares,,61382
+60152,,Bagus Kedaleman,,64156,,66191,,Gembuk,,"Araararedja, East Java",,"Domasan, East Java",,"Gemurung, Jawa Timur, Indonesia",,"Babat, East Java ",,Bareng ,,"Bugis, East Java",,Jatirejo   ,,"Ngepeh, Jawa Timur, Indonesia",,61383
+60153,,Bakalanrayung,,64157,,66192,,Gendaran,,Asempapak,,Gendingan 1,,Glagah Arum,,"Babat, Jawa Timur, Indonesia",,Beduri,,"Bulukerto, Jawa Timur, Indonesia",,Jatirejo    ,,Ngetal,,61384
+60154,,Balong Besuk,,64161,,66193,,Glinggangan,,Babakbawo,,Gendingan 2,,"Jabonprambon, East Java",,"Bandung 1, Indonesia",,Brotonegaran,,"Bululawang, Jawa Timur, Indonesia",,Joho,,"Nglongsor, Jawa Timur, Indonesia",,61385
+60155,,Balonggemek,,64162,,66194,,Gondang,,Babaksari,,"Gondang, Jawa Timur, Indonesia",,"Jambangan, East Java",,"Bangkok, Jawa Timur, Indonesia",,"Bungkal, Jawa Timur, Indonesia",,Bumiayu,,Juwet,,Ngulah Kulon,,Awangawang
+60161,,Balongsari ,,64171,,Bacem,,Gondosari,,Babatan,,Jepun,,Janti,,Banjarmendalan,,Cokromenggalan,,"Bumiayu Dua, East Java",,Kacangan,,Ngulah Wetan,,Balongmojo
+60162,,Bandung,,64172,,"Bacem, Jawa Timur, Indonesia",,Gunung Rejo,,"Bakalan, East Java",,"Kalangbret, Jawa Timur, Indonesia",,"Japanan, Jawa Timur, Indonesia",,"Bapuhbandung, East Java",,Gupolo,,"Bumiayu Satu, East Java",,Kampungbaru,,"Panggul, Jawa Timur, Indonesia",,Balongsari
+60163,,Bangsri,,64173,,Bajang,,Gunungsari,,"Bakung, East Java",,"Kalidawir, Jawa Timur, Indonesia",,"Jati, Jawa Timur, Indonesia",,"Bapuh-baru, East Java",,"Jenangan, Jawa Timur, Indonesia",,"Bumiayu, Jawa Timur, Indonesia",,Kapas,,Parakan,,"Balongtjangak, East Java"
+60164,,Banjar Dowo,,64174,,Bendo,,Hadiluwih,,"Balekambang, East Java",,Kampungdalem,,"Jimbaran-kulon, East Java",,Beru,,Kadipaten,,"Bunut-Wetan, Jawa Timur, Indonesia",,Karangsono,,"Poele 1, East Java",,"Bangsal, Jawa Timur, Indonesia"
+60165,,Banjar Sari,,64175,,Bendogerit,,Hadiwarno,,Balikterus,,Karangwaru,,"Jimbaran-wetan, East Java",,Besur,,Kanitem,,"Candirenggo, Jawa Timur, Indonesia",,Karangtengah ,,"Pogalan, Jawa Timur, Indonesia",,"Bangun, East Java"
+60171,,Banjaragung ,,64176,,"Bendorejo, East Java",,Jatigunung,,Balong Panggang,,Kauman    ,,"Joho, East Java",,Blajo,,Kepatihan     ,,"Dadapan, Jawa Timur, Indonesia",,Kauman,,Rejowinangun,,Banjaragung
+60172,,Banyuarang,,64181,,Blitar,,Jatimalang,,"Balongdinding, East Java",,Kauman     ,,Juwet Kenongo,,Blawi,,"Kesugihan, East Java, Indonesia",,"Dampit, Jawa Timur, Indonesia",,Kebonagung  ,,Sambilrejo,,Belahantengah
+60173,,Barong Sawahan,,64182,,"Bumirejo, Jawa Timur, Indonesia",,Jeruk,,"Balongjrambah, East Java",,Kedungsoko,,"Kadelesan, East Java",,Blawirejo,,"Pulung, Jawa Timur, Indonesia",,"Darungan, Jawa Timur, Indonesia",,Kedungdowo,,Sukosari ,,Bendunganjati
+60174,,Bawangan,,64183,,Dayu,,Jetak,,Balongmojo,,"Kedungwaru, Jawa Timur, Indonesia",,"Kajeksan, East Java",,"Bluluk, East Java ",,Ketro,,"Dau, Jawa Timur, Indonesia",,Kedungsoko ,,Sumberdadi,,Bening
+60175,,Bedah Lawak,,64211,,Doko,,Jetis Kidul,,Balongpanggang,,Kenayan,,Kalitengah,,Blumbang,,Mangkujayan,,"Dawuhan 2, East Java",,"Kelutan, Ngronggot",,Sumbergedong,,Beratkulon
+60176,,"Bejijong, East Java",,64212,,"Gabru, East Java",,"Jetis-kidul, East Java",,"Balongpanggang, East Java",,Kepatihan ,,"Kampak, East Java",,Bluri,,Mangunsuman,,"Dawuhan, East Java",,Kemlokolegi,,Surodakan,,Beratwetan
+60177,,Bendet,,64213,,"Gambar, East Java",,Jetislor,,"Balongsari, Jawa Timur, Indonesia",,Ketanon,,"Karangbong, Jawa Timur, Indonesia",,Bogobabadan,,"Mlarak, Jawa Timur, Indonesia",,Gadingkasri,,Kendalrejo,,"Suruh-wetan, East Java",,Betro
+60178,,Bendungan,,64214,,"Gandusari, Jawa Timur, Indonesia",,Jlubang,,Balongtunjung,,"Krenggan, East Java",,Kebakalan,,Bojoasri,,"Ngebel, Jawa Timur, Indonesia",,"Genengan, Jawa Timur, Indonesia",,Kepanjen ,,Tamanan ,,Bicak
+60179,,"Betek, Mojoagung",,64215,,Gaprang,,Kalak,,"Balongwangon, East Java",,Kutoanyar,,"Kebaron, Jawa Timur, Indonesia",,Botoputih,,"Ngrajoen, East Java, Indonesia",,"Glagaharun, East Java",,"Kepuh,Kertosono",,"Tasikmadoe, East Java",,Bleberan
+60182,,Blimbing,,64216,,"Garum, Jawa Timur, Indonesia",,Kalikuning,,Bambe,,Majan,,"Keboananom, Jawa Timur, Indonesia",,Brangsi,,"Ngrayun, Jawa Timur, Indonesia",,"Glagahombo, East Java",,Kerep Kidul,,"Toegoe 1, East Java",,Blimbingsari
+60183,,"Blimbing, Jawa Timur, Indonesia",,64217,,Gedog,,"Kampoeng Tempuran, East Java",,"Bambe, Jawa Timur, Indonesia",,Mangunsari,,"Keboansikep, Jawa Timur, Indonesia",,Brengkok,,"Ngumpul, Jawa Timur, Indonesia",,"Glendangan, East Java",,Ketawang,,"Watulimo, Jawa Timur, Indonesia",,Blooto
+60184,,Bongkot,,64218,,"Gogoniti, East Java",,Karanganyar,,"Bandung 2, East Java",,"Ngantru, Jawa Timur, Indonesia",,"Keboharan, Jawa Timur, Indonesia",,"Brondong, East Java ",,Ngunut,,"Gondanglegi-wetan, East Java",,Kudu,,"Wonocoyo, Jawa Timur, Indonesia",,Brangkal
+60185,,Brambang,,64219,,Jatinom,,Karanggede,,Bandungsekaran,,"Ngoedjang, East Java",,"Kedinding, East Java",,Bronjong,,Nologaten,,"Gunungrejo, Jawa Timur, Indonesia",,Kweden,,"Wonocoyo, Trenggalek",,Brayublandong
+60186,,Brangkalan,,64221,,"Jegu, Sutojayan",,Karangnongko,,Bangeran,,"Ngujang, Jawa Timur, Indonesia",,"Kedungbanteng, Tanggulangin",,Brumbun,,Paju,,"Jambearjo, East Java",,Lengkonglor,,,,Brayung
+60187,,"Brodot, Bandar Kedung Mulyo",,64222,,Jingglong,,Karangrejo,,"Bangkingan, Jawa Timur, Indonesia",,"Ngunut, Jawa Timur, Indonesia",,Kedungbendo,,Bugel,,Pakunden  ,,"Jambu, East Java",,"Lestari, Patianrowo",,,,Candiharjo
+60188,,Brudu,,64223,,Kalipang,,Kasihan,,Banjaragung,,"Pagerwojo, Jawa Timur, Indonesia",,Kedungboto,,Bugoharjo,,Patihan Wetan,,"Jambuwer, Jawa Timur, Indonesia",,Mojoduwur,,,,Candiwatu
+60189,,Budugsidorejo,,64224,,"Kanigoro, Jawa Timur, Indonesia",,Katipugal,,Banjaran,,Panggungrejo,,"Kemantren, East Java",,Bulutengger,,"Pelem 1, East Java",,"Jatimulyo, Jawa Timur, Indonesia",,"Ngandjoek, East Java",,,,Centong
+60191,,Bulurejo,,64225,,Karangsari,,Kayen,,"Banjaran, East Java",,"Panjerrejo, East Java",,"Kemasan, Krian",,Bulutigo,,Pinggirsari,,"Jatirejoso, Jawa Timur, Indonesia",,Ngasem,,,,Cepokolimo
+60192,,Candi Mulyo,,64226,,Kaulon,,Kebon Agung,,"Banjar-anyar, East Java",,Plandaan,,"Kemiri, Jawa Timur, Indonesia",,Butungan,,"Ponogoro, Jawa Timur, Indonesia",,"Jeding, East Java",,Ngepeh,,,,Cinandang
+60195,,Cangkringrandu,,64227,,"Kawisari, East Java",,Kebonagung,,Banjarsari,,Plosokandang,,"Kepuh, Jawa Timur, Indonesia",,Candisari,,"Pudakkulon, East Java, Indonesia",,"Jombok, Jawa Timur, Indonesia",,Ngrengket,,,,Claket
+60196,,Carangwulung,,64228,,Kedungbunder,,Kebondalem,,"Banjarsari, East Java",,"Redjotangan 1, East Java",,"Kepuhbeiro, East Java",,Canditunggal,,"Sambit, Jawa Timur, Indonesia",,"Juwet, East Java",,"Ngronggot, Jawa Timur, Indonesia",,,,Curahmojo
+60197,,Cetak Gayam,,64229,,"Kembangarum, Sutojayan",,Kebonsari,,Banter,,Rejoagung,,"Kepuhkemiri, East Java",,Canggah,,"Sampung, Jawa Tengah, Indonesia",,"Kacuk, East Java",,Ngumpul ,,,,Dawar Blandong
+60198,,"Ceweng, Diwek",,64291,,Kepanjen Lor,,Kedungbendo,,Banyutengah,,"Rejotangan, Jawa Timur, Indonesia",,"Kepuhsari, East Java",,Cangkring,,"Slahung, Jawa Timur, Indonesia",,"Kajang, East Java",,Pandantoyo,,,,Dawarblandong
+60199,,"Cukir, Jawa Timur, Indonesia",,64292,,"Keras, East Java",,Kembang,,Banyuurip,,Ringinpitu,,"Kepungmlaten, East Java",,Centini,,Surodikraman,,"Kajar, East Java",,"Paron,kec.bagor",,,,Dilem
+60211,,Cupak,,64293,,Klampok,,Kemuning,,Banyuwangi,,"Ruser, East Java",,"Kepunten, East Java",,Cluring,,"Tamansari, Jawa Timur, Indonesia",,"Kalipare, Jawa Timur, Indonesia",,"Patianrowo, Jawa Timur, Indonesia",,,,Dinoyo
+60212,,"Curah Malang, Sumobito",,64294,,"Krisik, Jawa Timur, Indonesia",,Kendal,,Baron,,"Sembung, Tulungagung",,"Kletek Sambikerep, Jawa Timur, Indonesia",,Cungkup,,Tambakbayan,,"Kalisari, East Java",,Payaman,,,,Dlanggu
+60213,,"Curahmalang, East Java",,"Badek, East Java",,Kuningan,,Ketanggung,,"Batanggadjah, East Java",,Simo,,Kraton,,Dagan,,Tonatan,,"Kambingan Dua, East Java",,"Pelem, Kertosono",,,,Domas
+60214,,Dadi Tunggal,,Balowerti,,"Lodoyo, Jawa Timur, Indonesia",,Ketepung,,Bedanten,,"Sumbergempol, Jawa Timur, Indonesia",,"Kwangen, East Java",,Daliwangun,,,,"Kambingan Satu, East Java",,Ploso,,,,Dukuhngarjo
+60215,,Dapur Kejambon,,"Bambingan, East Java",,"Maron, Jawa Timur, Indonesia",,Ketro,,"Bedanten, East Java",,"Sumberpandan, East Java",,"Kwangsan Kidul, East Java",,Dateng,,,,"Kapru, East Java",,"Pucuk, Patianrowo",,,,Duyung
+60216,,"Darurejo, Plandaan",,Bandar Kidul,,Ngadirejo,,Kledung,,Bedilan,,"Suruhan, Jawa Timur, Indonesia",,"Kwangsan Lor, East Java",,Datinawong,,,,"Kapurono, East Java",,"Puhkerep, Rejoso",,,,Gading
+60217,,"Denanyar, Jawa Timur, Indonesia",,Bandar Lor,,"Nglegok, Jawa Timur, Indonesia",,Klepu,,"Bedilan, Jawa Timur, Indonesia",,Tamanan,,"Kwangsan Tengah, East Java",,Deket,,,,"Karangrejo Dua, East Java",,Pule,,,,Gayaman
+60218,,"Diwek, Jawa Timur, Indonesia",,Banjaran,,Pakunden,,Klepu (Kelepu),,"Belahanredjo, East Java",,"Tapan, Tulungagung",,"Kwangsan, East Java",,Deket Kulon,,,,"Karangsari 1, East Java",,"Rejoso, East Java",,,,Gebangmalang
+60219,,"Djombang, Jawa Timur, Indonesia",,Banjarmlati,,Pandanarum,,Klesem,,Belahanrejo,,Tawangsari,,"Maduretno, East Java",,Deket Wetan,,,,"Karangsari Satu, Jawa Timur, Indonesia",,Ringinanom,,,,Gebangsari
+60221,,Dukuh Arum,,"Banyakan, Jawa Timur, Indonesia",,Papungan,,Kluwih,,Bendungan,,Tertek,,Magersari,,Deketagung,,,,"Karangtengah, East Java",,"Salamdjudek, East Java",,,,Gedeg
+60222,,Dukuh Klopo,,"Besowo, Jawa Timur, Indonesia",,"Pelas, Jawa Timur, Indonesia",,Losari,,Bengkelolor,,"Toeloengagoeng, East Java",,"Mergobener, East Java",,Dermo Lemahbang,,,,"Kasembon, Jawa Timur, Indonesia",,Salamrojo,,,,Gedongan
+60223,,Dukuh Mojo,,"Bogokidul, East Java",,"Penataran, Jawa Timur, Indonesia",,Mangunharjo,,Benjeng,,Tunggulsari,,"Mergojog, East Java",,Dibe,,,,"Kasian, East Java",,"Sambikerep, Rejoso",,,,Gembongan
+60224,,Dukuhdimoro,,"Brenggolo, Jawa Timur, Indonesia",,Plosokerep,,"Mangunharjo, Jawa Timur, Indonesia",,Betiting,,Winong,,"Mergosari, East Java",,Doyomulyo,,,,"Kasim, East Java",,Sambirejo,,,,"Gembongan, Jawa Timur, Indonesia"
+60225,,Gabusbanaran,,Bujel,,"Pohgajih, Jawa Timur, Indonesia",,Mantren,,Beton,,,,"Mijen, East Java",,Dradah Blumbang,,,,"Kasur, East Java",,Sekaran,,,,Gemekan
+60226,,Gadingmangu,,Campurejo,,Pojok ,,Menadi,,Betoyoguci,,,,"Mlati 1, East Java",,Drajat,,,,"Kebalon, East Java",,Sendangbumen,,,,Gempolkrep
+60227,,Galengdowo,,Dandangan,,"Ponggok, Jawa Timur, Indonesia",,Mendolo Kidul,,Betoyokauman,,,,"Mojokemuning, East Java",,Drujugurit,,,,Kebonsari ,,Sidoharjo,,,,Gumeng
+60228,,Gambiran,,Dermo,,Rembang,,Mendolo Lor,,"Bibis-kulon, East Java",,,,"Mojorangagung, East Java",,Duduk Lor,,,,"Kebuban, East Java",,Sidorejo  ,,,,Gunung Gedangan
+60229,,Gebang Bunder,,Duwet,,"Sanankulon, East Java",,Mentoro,,"Bibis-wetan, East Java",,,,"Ngaglik, Jawa Timur, Indonesia",,"Dukuh, East Java",,,,"Kedawung, Jawa Timur, Indonesia",,Singkalanyar,,,,Gunungan
+60231,,Gedangan,,"Gadungan, Wates",,"Selopuro, Jawa Timur, Indonesia",,Mlati,,Boboh,,,,"Ngaresrejo, East Java",,Dukuhagung,,,,Kedung Pedaringan,,Siwalan,,,,Gunungsari
+60232,,Gedangan ,,"Gampeng, East Java",,"Semen, Jawa Timur, Indonesia",,"Pachitan, Jawa Timur, Indonesia",,Bolo,,,,"Pagerwojo-lor, East Java",,Dukuhtunggal,,,,"Kemantren Dua, East Java",,Sudimoroharjo,,,,"Jabon, Jawa Timur, Indonesia"
+60233,,Gempol Legundi,,"Gampengrejo, Jawa Timur, Indonesia",,Sentul,,"Punung, Jawa Timur, Indonesia",,"Boro-kulon, East Java",,,,"Penambangan, East Java",,Dumpiagung,,,,"Kemantren Satu, East Java",,Sugihwaras,,,,Jabontegal
+60234,,Genengan Jasem,,Gayam,,"Serang, Jawa Timur, Indonesia",,"Tegalombo, Jawa Timur, Indonesia",,Boteng,,,,"Plaosan, Jawa Timur, Indonesia",,Duri Kulon,,,,Kemiri,,"Sugihwaras, Bagor",,,,"Jagalan,Mojokerto,Jawa Timur"
+60235,,"Genukwatu, Ngoro",,"Gurah, Jawa Timur, Indonesia",,"Sirahkentjong, East Java",,"Tulakan, Jawa Timur, Indonesia",,Brangkal,,,,Plumbon,,Durikedungjero,,,,"Kepanjen, Jawa Timur, Indonesia",,"Sugihwaras, Prambon",,,,Jambuwok
+60236,,Glagahan,,Jagalan,,"Srengat, Jawa Timur, Indonesia",,,,Bringkang,,,,"Plumbungan, East Java",,Duriwetan,,,,"Kepuharjo, Jawa Timur, Indonesia",,Sukoharjo ,,,,Jampirogo
+60237,,Godong,,Jajar ,,Sumberejo,,Nanggungan,,"Bringkang, East Java",,,,"Plumpung, East Java",,Gambuhan,,,,"Ketawang, East Java",,"Sukomoro, East Java",,,,Japan
+60238,,Gondang Manis,,"Janti, Wates",,"Suruhwadang, Jawa Timur, Indonesia",,"Nawangan, Jawa Tengah, Indonesia",,Bulangan,,,,"Pohjejer, East Java",,Gampang Sejati,,,,"Ketawanggede, Jawa Timur, Indonesia",,Sukorejo    ,,,,Jasem
+60239,,Gondek,,"Joho, Wates",,"Taloen, Jawa Timur, Indonesia",,"Ngadirojo, Jawa Timur, Indonesia",,Bulangkulon,,,,"Popoh, East Java",,Ganggantingan,,,,"Kidal 1, East Java",,Sumberagung   ,,,,Jatidukuh
+60242,,Gongseng,,"Jugo, Jawa Timur, Indonesia",,Tanggung,,"Pringkuku, Jawa Timur, Indonesia",,Bululanjang,,,,"Pucang, Jawa Timur, Indonesia",,Garung,,,,"Kidal, Jawa Timur, Indonesia",,Sumberjo  ,,,,Jatijejer
+60243,,Grobogan,,Kaliombo,,Tlumpu,,,,Bulurejo,,,,"Punggul, Jawa Timur, Indonesia",,Gawerejo,,,,Klampok ,,Sumbersono,,,,Jatilangkung
+60244,,Grogol,,Kampung Dalem,,Turi,,,,"Bulurejo, East Java",,,,Rangkahkidul,,Gebangangkrik,,,,"Klampok 1, East Java",,Sumberwindu,,,,Jatipasar
+60245,,"Gudo, Swiss",,"Kandat, Jawa Timur, Indonesia",,"Udanawu, Jawa Timur, Indonesia",,,,Bunderan,,,,"Rangkah-kidul, East Java",,Gedongboyo Untung,,,,"Ledok 2, East Java",,Sumengko,,,,"Jatirejo, Jawa Timur, Indonesia"
+60246,,Gumulan,,Karanganyar ,,"Wlingi, Jawa Timur, Indonesia",,,,Bungah,,,,"Rangkah-lor, East Java",,Geger,,,,"Ledokomo, East Java",,Surui,,,,Jatirowo
+60251,,Jabon,,"Kawarasan, East Java",,"Wonodadi, Jawa Timur, Indonesia",,,,Cagakagung,,,,"Sambiroto 1, East Java",,Gelap,,,,Losari,,"Talang, Rejoso",,,,Jembul
+60252,,"Janti, Jogoroto",,"Kedak, Jawa Timur, Indonesia",,,,,,Campurejo,,,,"Sarirogo, East Java",,Gembong,,,,Madyopuro ,,Talun,,,,Jerukseger
+60253,,"Janti, Mojoagung",,Kediri,,,,,,Cangaan,,,,"Sawocangkring, East Java",,Gempol Tukmloko,,,,"Magersari, East Java",,"Tamanan, Jawa Timur, Indonesia",,,,Jiyu
+60254,,Jantiganggong,,Kemasan,,,,,,Cangkir,,,,"Sawohan, East Java",,Gempolmanis,,,,"Magoean, Jawa Timur, Indonesia",,Tanjung,,,,Jolotundo
+60255,,Japanan,,"Kepung, Jawa Timur, Indonesia",,,,,,Cerme,,,,"Sedati, Jawa Timur, Indonesia",,Gempolpading,,,,"Manggis, East Java",,Tanjungrejo,,,,Jotangan
+60256,,Japanan ,,"Kunjang, Jawa Timur, Indonesia",,,,,,Cerme Kidul,,,,"Sedatigede, Jawa Timur, Indonesia",,Gempolpendowo,,,,"Manggissari, East Java",,Tanjungtani,,,,"Jotangan, Jawa Timur, Indonesia"
+60261,,Japanan Kaler,,Lirboyo,,,,,,Cerme Lor,,,,"Sekelor Utara, East Java",,Gendong Kulon,,,,"Mangunrejo, Jawa Timur, Indonesia",,Tegaron,,,,Jrambe
+60262,,Jarak,,"Maesan, Jawa Timur, Indonesia",,,,,,"Cerme, Jawa Timur, Indonesia",,,,"Seketi, East Java",,German,,,,"Mergosono, Jawa Timur, Indonesia",,Tekenglagahan,,,,Jumeneng
+60263,,Jarak Kulon,,"Minggiran, Jawa Timur, Indonesia",,,,,,"Cerme-kidul, East Java",,,,"Semambung, Jawa Timur, Indonesia",,Gintungan,,,,"Merjosari, Jawa Timur, Indonesia",,Tembarak,,,,Kaligoro
+60264,,Jati Duwur,,"Mojokerep, Jawa Timur, Indonesia",,,,,,"Cerme-lor, East Java",,,,Semampir Barat,,Girik,,,,"Merjoyo, East Java",,Tempelwetan,,,,Kalikatir
+60265,,Jati Wates,,"Mojoroto, Kediri",,,,,,Cermen,,,,"Semampir Timur, Jawa Timur, Indonesia",,Glagah,,,,"Mojorejo, Jawa Timur, Indonesia",,Tempuran,,,,Kalipuro
+60271,,Jatibanjar,,Mrican,,,,,,Dadapkuning,,,,Sentul  ,,"Glagah, Jawa Timur, Indonesia",,,,Mojosari ,,Tiripan,,,,Karangasem
+60272,,Jatigedong,,"Ngadiluwih, Jawa Timur, Indonesia",,,,,,"Dagang, East Java",,,,"Sepande, Jawa Timur, Indonesia",,Godog,,,,"Mondoroko, East Java",,Tirtobinangun,,,,Karangdiyeng
+60273,,Jatimlerek,,Ngadirejo  ,,,,,,Dahanrejo,,,,"Sepanjang, Jawa Timur, Indonesia",,Gondang Lor,,,,Mulyorejo,,Trayang,,,,Karangjeruk
+60274,,Jatipelem,,Ngampel,,,,,,Dalegan,,,,"Sidodadi 1, East Java",,Guci,,,,"Nanasan, East Java",,"Tritik, Jawa Timur, Indonesia",,,,Karangkedawang
+60275,,Jatirejo  ,,"Ngancar, Jawa Timur, Indonesia",,,,,,Dampaan,,,,"Sidodadi Dua, East Java",,Gumantuk,,,,"Ngadipuro, Jawa Timur, Indonesia",,"Warujayeng, East Java",,,,Karangkuten
+60281,,Jelakombo,,"Ngawinan, Jawa Timur, Indonesia",,,,,,Dapet,,,,"Sidokerto, Jawa Timur, Indonesia",,Guminingrejo,,,,"Ngandat, East Java",,Warungotok,,,,"Karanglo, East Java"
+60282,,Jenisgelaran,,Pagu,,,,,,Daun,,,,Sidokumpul ,,Gunungrejo,,,,"Nganding, East Java",,Wates ,,,,Kauman   
+60283,,"Jipurapah, Plandaan",,"Pagu, Jawa Timur, Indonesia",,,,,,Dekatagung,,,,Sidomulyo ,,Jagran,,,,"Ngantang, Jawa Timur, Indonesia",,"Wilangan, East Java",,,,Kebondalem
+60284,,Jogoloyo,,"Pagungjoho, East Java",,,,,,Deliksumber,,,,"Sidorejo Dua, East Java",,Jangkungsomo,,,,"Ngembal 1, East Java",,"Waung, Baron",,,,Kebontunggul
+60285,,Johowinong,,Pakelan,,,,,,Dermo,,,,"Simoketawang, East Java",,Jatidrojok,,,,"Ngembal Dua, East Java",,Sanggrahan,,,,Kedundung
+60286,,"Jombang, Jawa Timur, Indonesia",,"Papar, Jawa Timur, Indonesia",,,,,,Diponggo,,,,"Singkil, East Java",,Jatipandak,,,,"Ngemptak, East Java",,,,,,Kedunggede
+60291,,Jombatan,,Parang,,,,,,Dohoagung,,,,"Sirapan, East Java",,Jatipayak,,,,"Ngenep, Jawa Timur, Indonesia",,,,,,Kedunggempol
+60292,,Jombatan ,,Pare,,,,,,Domas,,,,"Siwalanpanji, East Java",,Jatirenggo,,,,"Ngrejo, Jawa Timur, Indonesia",,,,,,Kedunglengkong
+60293,,Jombok,,Plaosan,,,,,,Dooro,,,,"Slawe, East Java",,Jegreg,,,,"Pabrik, East Java",,,,,,Kedungmaling
+60294,,"Jombok, Ngoro",,"Plemahan, Jawa Timur, Indonesia",,,,,,Doudo,,,,Sodirejo,,Jejel,,,,"Pajaran, Jawa Timur, Indonesia",,,,,,Kedungmunggal
+60295,,"Kabuh, Jawa Timur, Indonesia",,"Ploso 1, East Java",,,,,,Drancang,,,,"Sudimoro, Jawa Timur, Indonesia",,Jelakcatur,,,,"Pakis, East Java ",,,,,,Kedungudi
+60296,,Kademangan,,Pocanan,,,,,,Driyorejo,,,,Sumput,,Jetis ,,,,"Pakisaji, Jawa Timur, Indonesia",,,,,,Kedunguneng
+60297,,Kalang Semanding,,"Pohsarang, East Java",,,,,,Duduk Sampeyan,,,,"Suruh, East Java",,"Jetis, Jawa Timur, Indonesia",,,,"Pakiskembar, Jawa Timur, Indonesia",,,,,,Kejagan
+60298,,Kali Kejambon,,Pojok,,,,,,Dukuh Kembar,,,,"Susukan, East Java",,"Jetis, Lamongan",,,,"Pandansari-kidul, East Java",,,,,,Kelurahan
+60299,,Kaliwungu,,Pojok  ,,,,,,"Dukuh, Jawa Timur, Indonesia",,,,"Taman, Jawa Timur, Indonesia",,Jotosanur,,,,Pandanwangi ,,,,,,Kemasantani
+Airlangga,,"Kampungbaru, Plandaan",,"Puncu, Jawa Timur, Indonesia",,,,,,Dukun,,,,Tambak Kidul,,Jubel Kidul,,,,"Panggung 1, East Java",,,,,,Kembangbelor
+Alun-alun Contong,,Karang Dagangan,,Ringin Anom,,,,,,"Dukun, Jawa Timur, Indonesia",,,,"Tambakkemeraan, East Java",,Jubel Lor,,,,"Panggungrejo, Jawa Timur, Indonesia",,,,,,Kembangringgit
+Ampel,,Karang Mojo,,"Sambi, Jawa Timur, Indonesia",,,,,,Dukunanyar,,,,"Tambakoso, East Java",,Jugo,,,,"Panjer, East Java",,,,,,Kembangsri
+Babat Jerawat,,Karang Pakis,,"Sambirejo, Jawa Timur, Indonesia",,,,,,Dungus,,,,Tambarejo,,Kadungrembug,,,,"Penanggungan, Jawa Timur, Indonesia",,,,,,Kemlagi
+"Babatan, Jawa Timur, Indonesia",,"Karanglo, Mojowarno",,"Satak, East Java",,,,,,"Dungus, East Java",,,,"Tanggulangin, Jawa Timur, Indonesia",,Kakatpenjalin,,,,"Penarukan, Jawa Timur, Indonesia",,,,,,Kenanten
+Balas Klumprik,,Karangwinongan,,"Segaran, Wates",,,,,,Gadingwatu,,,,"Tanjungsari, East Java",,Kalanganyar,,,,"Pendem, Jawa Timur, Indonesia",,,,,,Kepuhanyar
+Balong Sari,,Karobelah,,Semampir,,,,,,"Gadingwatu, East Java",,,,"Tarik Kidul, East Java",,"Kalen, East Java",,,,"Pesantren 1, East Java",,,,,,Kepuharum
+"Bandarejo, East Java",,"Kauman, Mojoagung",,Setono Gedong,,,,,,Gadung,,,,"Tarik, Jawa Timur, Indonesia",,Kaligerman,,,,"Pesantren Dua, East Java",,,,,,Kepuhpandak
+Banjar Sugihan,,Kayen,,Setono Pande,,,,,,Ganggang,,,,"Tawangsari, East Java",,"Kalitengah, Jawa Timur, Indonesia",,,,"Petungombo, East Java",,,,,,Kesemen
+"Banjarrejo, East Java",,Keboan,,Sidomulyo  ,,,,,,Gapurosukolilo,,,,Tebel ,,Kaliwates,,,,"Petungroto, East Java",,,,,,Kesiman
+Banyu Urip,,Kebon Agung,,Silir,,,,,,Gedangan,,,,"Tebet, East Java",,"Kambangan, East Java",,,,"Petungsewu, East Java",,,,,,Kesimantengah
+Barata Jaya,,Kebontemu,,Sukorame,,,,,,Gedangkulut,,,,"Tegalgunung, East Java",,Kandang Semangkon,,,,"Plandi, East Java",,,,,,Ketapanrame
+Bendul Merisi,,Kedawong,,Sumberagung ,,,,,,Gedongkedoan,,,,"Tekik, East Java",,Kandangrejo,,,,"Plosokerep, East Java",,,,,,Ketemasdungus
+"Benowo, East Java",,Kedung Betik,,"Tamanan, Kediri",,,,,,Gelam,,,,Tempel,,Kanugrahan,,,,"Pojok Dua, East Java",,,,,,Kintelan
+Bibis,,Kedung Bogo,,"Tangkilan, East Java",,,,,,Gempolkurung,,,,"Tempel 1, East Java",,Karang,,,,"Pojok Satu, East Java",,,,,,Klinterejo
+Bongkaran,,Kedung Jati,,Tawang,,,,,,Gending,,,,"Terik, Jawa Timur, Indonesia",,Karang Sambigalih,,,,"Poncokusumo, Jawa Timur, Indonesia",,,,,,"Kranggan, Kota Mojokerto"
+"Bringin, Jawa Timur, Indonesia",,Kedung Losari,,"Tegowangi, East Java",,,,,,Giri,,,,"Terung Kulon, Jawa Timur, Indonesia",,Karangagung,,,,"Prangas 1, East Java",,,,,,Kumitir
+Bulak Banteng,,Kedung Mlati,,Tempurejo,,,,,,Glanggang,,,,"Terung Wetan, Jawa Timur, Indonesia",,Karanganom,,,,"Prangas Dua, East Java",,,,,,Kunjorowesi
+"Bulak, East Java",,Kedung Otok,,Tunge,,,,,,Glatik,,,,"Tiandi, East Java",,"Karangbinangun, East Java ",,,,"Punten, East Java",,,,,,Kupang
+"Bulakbanteng, East Java",,Kedung Rejo,,"Turus, East Java",,,,,,Glindah,,,,"Tjandihowo, East Java",,Karangcangkring,,,,"Purwoasri, Jawa Timur, Indonesia",,,,,,Kuripansari
+Buntaran,,"Kedungbungkil, East Java",,"Weru, East Java",,,,,,Gluranploso,,,,"Tjangkringaalak, East Java",,Karanggeneng,,,,Purwodadi,,,,,,Kutogirang
+"Dermo-kulon, East Java",,Kedungdowo ,,"Wonorejo, Wates",,,,,,Golokan,,,,"Tjelep, East Java",,"Karanggeneng, East Java ",,,,"Salam, East Java",,,,,,Kutoporong
+Dr Sutomo,,Kedunglumpang,,,,,,,,"Golokan, East Java",,,,"Tlasih Satu, East Java",,Karangkembang,,,,"Sanankerto, Jawa Timur, Indonesia",,,,,,Kutorejo
+Dukuh Kupang,,"Kedungmaing, East Java",,,,,,,,Gosari,,,,"Trengguli, East Java",,Karanglangit,,,,"Sanatejo, East Java",,,,,,"Kutorejo, Jawa Timur, Indonesia"
+Dukuh Menanggal,,Kedungpapar,,,,,,,,Gredek,,,,Tropodo,,Karangtawar,,,,"Saptorenggo, Jawa Timur, Indonesia",,,,,,Kwatu
+Dukuh Sutorejo,,"Kedungpari, Mojowarno",,,,,,,,Grejeg,,,,"Tropodo Kulon, Jawa Timur, Indonesia",,Karangtinggil,,,,"Sawojajar, Jawa Timur, Indonesia",,,,,,"Kwatu, East Java"
+"Dukuh Sutorejo, Jawa Timur, Indonesia",,Kedungturi,,,,,,,,Gresik,,,,"Tropodo Wetan, Jawa Timur, Indonesia",,Karangturi,,,,"Sekaran 1, East Java",,,,,,Kwedenkembar
+"Dukuhpakis, East Java",,"Kendalsari, Sumobito",,,,,,,,"Grogol 1, East Java",,,,"Tropodo, Jawa Timur, Indonesia",,Karangwedoro,,,,"Selecta, East Java",,,,,,Lakardowo
+"Dupak, Jawa Timur, Indonesia",,Kepanjen,,,,,,,,"Grogol, East Java",,,,"Tulangan, Jawa Timur, Indonesia",,Karangwungu,,,,"Selokentjono, East Java",,,,,,Lebakjabung
+Embong Kaliasin,,Keplaksari,,,,,,,,Gulomantung,,,,"Turipinggir, Jawa Timur, Indonesia",,Karangwungu Lor,,,,"Sempukerep, East Java",,,,,,Lebaksono
+Gadel,,Kepuh Doko,,,,,,,,Gumeng,,,,"Umbutlegi, East Java",,Katemas,,,,"Senggreng, Jawa Timur, Indonesia",,,,,,Leminggir
+"Gading, Tambaksari",,Kepuhkajang,,,,,,,,Gumeno,,,,Urangagung Jedong,,Kawistolegi,,,,"Sengguruh, Jawa Timur, Indonesia",,,,,,Lolawang
+Gebang Putih,,Kepuhkembeng,,,,,,,,"Gunungsari, Jawa Timur, Indonesia",,,,"Urangagungjedong, East Java",,Kebalan Kulon,,,,"Sepanjang Dua, East Java",,,,,,Madureso
+"Gebang Putih, Surabaya City, East Java, Indonesia",,Kepuhrejo,,,,,,,,Gunungteguh,,,,"Wadang, East Java",,Kebalandono,,,,"Seruk, East Java",,,,,,Mager Sari
+Genting Kalianak,,Kepuhrejo Sako,,,,,,,,Guranganyar,,,,"Wadungasih, East Java",,Kebalanpelang,,,,Sidodadi,,,,,,Manduro Manggung Gajah
+"Gubeng, East Java",,"Keras, Diwek",,,,,,,,"Hendrasalam, East Java",,,,Wadungasri Dalem,,Keben,,,,"Silir, East Java",,,,,,Manting
+Gundih,,"Kertorejo, Jawa Timur, Indonesia",,,,,,,,"Hendrasari, East Java",,,,"Wage, East Java",,Kebet,,,,"Singosari, Malang",,,,,,Medali
+"Gunung Anyar, East Java",,Kesamben,,,,,,,,Hendrosari,,,,"Wagir, East Java",,"Kebonagung, Jawa Timur, Indonesia",,,,"Sitiarjo, Jawa Timur, Indonesia",,,,,,Mejoyo
+"Gunung Sari, Dukuh Pakis",,"Kesamben, Jawa Timur, Indonesia",,,,,,,,Hulaan,,,,"Waru, Jawa Timur, Indonesia",,Kedali,,,,"Slamet, East Java",,,,,,"Mejoyo, East Java"
+"Gununganyar Utara, East Java",,Ketapang Kuning,,,,,,,,"Hulakan, East Java",,,,"Waruberon, East Java",,Kediren,,,,"Slamparejo, Jawa Timur, Indonesia",,,,,,"Menanggal, Mojosari"
+"Gununganyartambak Timur, East Java",,Klitih,,,,,,,,Ikerikergeger,,,,"Watesari, East Java",,Kedukbembem,,,,"Slorok, Jawa Timur, Indonesia",,,,,,Mentikan
+"Gununganyartambak, East Java",,"Krembangan, Gudo",,,,,,,,Imaan,,,,"Watugolong, Jawa Timur, Indonesia",,Kedungasri,,,,"Sudimoro 1, East Java",,,,,,Meri
+"Jagir, Jawa Timur, Indonesia",,Kromong,,,,,,,,Indro,,,,Wedoro ,,Kedungbanjar,,,,"Sudimoro Dua, East Java",,,,,,Miji
+Jajar Tunggal,,"Kudu, East Java",,,,,,,,Indrodelik,,,,"Wedoroklurak, East Java",,Kedungdadi,,,,"Sudimoro Satu, East Java",,,,,,Mlaten
+Jajar Tunggal ,,Kudubanjar,,,,,,,,Jatirembe,,,,"Wonokalang, East Java",,Kedungkumpul,,,,"Sukoanyar, Jawa Timur, Indonesia",,,,,,Mlirip
+Jemur Wonosari,,Kwaron,,,,,,,,Jogodalu,,,,"Wonokarang, East Java",,Kedunglerep,,,,Sukoharjo  ,,,,,,Modongan
+Jepara,,"Latsari, Mojowarno",,,,,,,,Jombangdelik,,,,"Wonokasihan, East Java",,Kedungmegarih,,,,"Sumberagung, Jawa Timur, Indonesia",,,,,,Modopuro
+"Jeruk, Jawa Timur, Indonesia",,"Losari, Ploso",,,,,,,,Jono,,,,"Wonoplintahan, East Java",,Kedungmentawar,,,,"Sumberbendo, Jawa Timur, Indonesia",,,,,,Mojoanyar
+Kali Rungkut,,Madyopuro,,,,,,,,Jrebeng,,,,"Wunut, Porong",,Kedungpengaron,,,,"Sumberbening, Jawa Timur, Indonesia",,,,,,Mojodowo
+"Kalibokor, Jawa Timur, Indonesia",,Mancar,,,,,,,,"Juwet Satu, East Java",,,,"Pager, Jawa Timur, Indonesia",,"Kedungpring, East Java ",,,,"Sumberduren, East Java",,,,,,Mojogebang
+"Kalijudan, Jawa Timur, Indonesia",,Mancilan,,,,,,,,"Kademean, East Java",,,,Permisan Sidoarjo,,"Kedungpring, Jawa Timur, Indonesia",,,,"Sumberejo, Jawa Timur, Indonesia",,,,,,Mojogeneng
+"Kalisari Jawa Timur, Indonesia",,Manduro,,,,,,,,"Kalimat, East Java",,,,"Tanjungsari, East Java",,Kedungrejo,,,,"Sumbergondo, East Java",,,,,,Mojojajar
+Kandangan ,,"Mangunan, Kabuh",,,,,,,,Kalipadang,,,,,,Kedungwangi,,,,"Sumbergong, East Java",,,,,,Mojokarang
+"Kapasan, Simokerto",,Manunggal,,,,,,,,Kalirejo,,,,,,Kedungwaras,,,,"Sumbermanjing-Wetan, Jawa Timur, Indonesia",,,,,,Mojokembang
+"Kapasari, Jawa Timur, Indonesia",,Marmoyo,,,,,,,,"Kambing, East Java",,,,,,Keduyung,,,,"Sumberporong, Jawa Timur, Indonesia",,,,,,Mojokumpul
+"Karah, Jawa Timur, Indonesia",,Mayangan,,,,,,,,Kambingan,,,,,,Kelorarum,,,,"Sumberpucung, Jawa Timur, Indonesia",,,,,,Mojokusumo
+"Karangpilang, East Java",,"Megaluh, East Java",,,,,,,,"Kambingan, East Java",,,,,,Kembangan,,,,"Sumberpuntjet, East Java",,,,,,Mojolebak
+Karangpoh,,"Mejoyolosari, Gudo",,,,,,,,Kandangan,,,,,,"Kembangbahu, East Java ",,,,"Sumberrejo Satu, East Java",,,,,,Mojopilang
+"Kebonsari, Jawa Timur, Indonesia",,Menganto,,,,,,,,"Kandangan, Jawa Timur, Indonesia",,,,,,Kemlaggi Lor,,,,"Sumbersari 1, East Java",,,,,,Mojoranu
+"Kebraon, Jawa Timur, Indonesia",,Mentaos,,,,,,,,Karangandong,,,,,,Kemlagigede,,,,"Sumberwungu, East Java",,,,,,"Mojosari, Jawa Timur, Indonesia"
+"Kedung Baruk, Rungkut",,Mentoro,,,,,,,,Karangankidul,,,,,,Kendal,,,,"Sumberwuni 1, East Java",,,,,,Mojosulur
+Kedung Cowek,,Menturus,,,,,,,,Karangcangkring,,,,,,Kendalkemlagi,,,,"Sumberwuni Dua, East Java",,,,,,Mojotamping
+"Kedungasem, Jawa Timur, Indonesia",,Miagan,,,,,,,,"Karanggundang, East Java",,,,,,Kentong,,,,"Sutojayan, East Java",,,,,,Mojowatesrejo
+Kedungdoro,,"Mlaras, Sumobito",,,,,,,,Karangkering,,,,,,Kepudibener,,,,"Tajinan, Jawa Timur, Indonesia",,,,,,Mojowiryo
+Kedungdoro ,,"Mojoagung, Jawa Timur, Indonesia",,,,,,,,Karangpoh,,,,,,Kesambi,,,,"Talangagung, Jawa Timur, Indonesia",,,,,,Mojowono
+"Kedurus, Jawa Timur, Indonesia",,Mojodanu,,,,,,,,Karangrejo,,,,,,Ketapangtelu,,,,"Talangsuko, Jawa Timur, Indonesia",,,,,,Ngareskidul
+Kejawan Putih Tambak,,"Mojoduwur, Jawa Timur, Indonesia",,,,,,,,"Karangrejo, East Java",,,,,,Keting,,,,"Talok, Jawa Timur, Indonesia",,,,,,Ngarjo
+Kemayoran,,Mojojejer,,,,,,,,Karangsemanding,,,,,,Keyongan,,,,"Tamanharjo, Jawa Timur, Indonesia",,,,,,Ngastemi
+Kendangsari,,Mojokambang,,,,,,,,Karangturi,,,,,,Klagensrampat,,,,"Tambaksari 3, East Java",,,,,,Ngembat
+"Kenjeran, East Java",,Mojokrapak,,,,,,,,Katimoho,,,,,,Konang,,,,"Tanggung, Jawa Timur, Indonesia",,,,,,Ngembeh
+"Keputih, Jawa Timur, Indonesia",,Mojongapit,,,,,,,,Kauman,,,,,,Kradenanrejo,,,,"Tangkilsari 1, East Java",,,,,,"Ngemplak 1, East Java"
+"Keputran, Jawa Timur, Indonesia",,"Mojoroto, Jawa Timur, Indonesia",,,,,,,,"Kaweden, East Java",,,,,,Kramat,,,,"Tanjungrejo, Jawa Timur, Indonesia",,,,,,Ngimbangan
+"Kertajaya Timur, Jawa Timur, Indonesia",,Mojotengah,,,,,,,,Kawisanyar,,,,,,Kranji,,,,"Tasikmadu, Jawa Timur, Indonesia",,,,,,Ngingasrembyong
+"Kertajaya, Jawa Timur, Indonesia",,Mojotrisno,,,,,,,,"Kawis-anyar, East Java",,,,,,Kreteranggon,,,,"Tawangargo, East Java",,,,,,Ngoro
+"Ketabang, Jawa Timur, Indonesia",,Mojowangi,,,,,,,,Kawistowindu,,,,,,Kudikan,,,,"Tebo, East Java",,,,,,Ngrame
+"Ketintang, Jawa Timur, Indonesia",,"Mojowarno, Jawa Timur, Indonesia",,,,,,,,"Kawistowindu, East Java",,,,,,Kuluran,,,,"Tegalgondo, East Java",,,,,,Ngrowo
+"Klampis Ngasem, Sukolilo",,Morosunggingan,,,,,,,,Kebomas,,,,,,Kuripan,,,,Tegalsari,,,,,,Nogosari
+Komplek Kenjeran,,Mundusewu,,,,,,,,"Kebomas, Jawa Timur, Indonesia",,,,,,Kuro,,,,"Tegalweru, East Java",,,,,,Pacet
+Krembangan Utara,,Munung Kerep,,,,,,,,Kebon Teluk Dalam,,,,,,Kuwurejo,,,,"Tejosari, East Java",,,,,,Pacing
+"Krembangan, East Java",,Murukan,,,,,,,,Kebonagung,,,,,,Labuhan,,,,"Temenggungan, East Java",,,,,,Padangasri
+Kupang Krajan,,Ngampel ,,,,,,,,Kebungson,,,,,,Laladan,,,,Temes,,,,,,Padi
+"Kutisari, Jawa Timur, Indonesia",,Ngampungan,,,,,,,,"Kebungson, Jawa Timur, Indonesia",,,,,,Lamongan,,,,"Terryang, East Java",,,,,,Padusan
+"Lakarsantri, East Java",,Nglebak,,,,,,,,Kedamean,,,,,,Lamongrejo,,,,"Tindjomojo, East Java",,,,,,Pagerjo
+"Lidah-Kulon, Jawa Timur, Indonesia",,Nglele,,,,,,,,Kedanyang,,,,,,"Laren, East Java ",,,,"Tirtomoyo, Jawa Timur, Indonesia",,,,,,Pagerluyung
+"Lidah-Wetan, Jawa Timur, Indonesia",,Ngogri,,,,,,,,Kedunganyar,,,,,,Latek,,,,"Tjaru, East Java",,,,,,Pandankrajan
+"Lontar, Jawa Timur, Indonesia",,Ngrandu Lor,,,,,,,,"Kedungbanteng, East Java",,,,,,Latukan,,,,"Tjepokomuljo, East Java",,,,,,Panggih
+"Made, Jawa Timur, Indonesia",,"Ngrimbi, Bareng",,,,,,,,Kedungpring,,,,,,Lawak,,,,"Tjepokosari, East Java",,,,,,Payungrejo
+Manukan Kulon,,Ngudirejo,,,,,,,,Kedungrukem,,,,,,Lawangan Agung,,,,"Tjodo 2, East Java",,,,,,Pekukuhan
+Manukan Wetan,,Ngumpul,,,,,,,,Kedungsekar,,,,,,Lebakadi,,,,"Tjurungredjo, East Java",,,,,,Pekuwon
+Manyar Sabrangan,,Ngusikan,,,,,,,,Kedungsumber,,,,,,Lembor,,,,"Tlekung, East Java",,,,,,Penanggungan
+Margorejo,,Pacar Peluk,,,,,,,,Kelompang Gubug,,,,,,"Lengkong, East Java",,,,Tlogomas,,,,,,Penompo
+"Medokan Ayu, Rungkut",,Pager Tanjung,,,,,,,,Kemangi,,,,,,Lohgung,,,,"Tlogosari, Jawa Timur, Indonesia",,,,,,Perning
+Medokan Semampir,,"Pagerwojo, Perak",,,,,,,,Kembangan,,,,,,Lopang,,,,"Toempang, East Java",,,,,,"Perning, Jawa Timur, Indonesia"
+Menanggal,,Pakel,,,,,,,,Kemudi,,,,,,Lukrejo,,,,"Toyomerto, East Java",,,,,,Petak
+Menur Pumpungan,,Palrejo,,,,,,,,Kemuteran,,,,,,Made,,,,"Tradjeng 1, East Java",,,,,,Peterongan
+"Mojo, Jawa Timur, Indonesia",,Pandan Blole,,,,,,,,Kepatihan,,,,,,Madulegi,,,,"Trongredjo, East Java",,,,,,"Plasa 2, East Java"
+"Morokrembangan, Jawa Timur, Indonesia",,Pandanwangi,,,,,,,,Kepuh Legundi,,,,,,"Maduran, Jawa Timur, Indonesia",,,,"Tumpangrejo, East Java",,,,,,Plososari
+"Mulyorejo, East Java",,"Panglungan, Wonosalam",,,,,,,,Kepuh Teluk,,,,,,Maindu,,,,"Tumpukrenteng, Jawa Timur, Indonesia",,,,,,Pohjejer
+"Ngagel Timur, Jawa Timur, Indonesia",,"Pelem, Jawa Timur, Indonesia",,,,,,,,Kepuhklagen,,,,,,Majenang,,,,"Tunggulwulung, Jawa Timur, Indonesia",,,,,,Pohkecik
+"Ngagel, Jawa Timur, Indonesia",,"Pengampon, Kabuh",,,,,,,,Kertosono,,,,,,"Majenang, Jawa Timur, Indonesia",,,,"Tunjungtirto, East Java",,,,,,Prajurit Kulon
+Nginden Jangkungan,,"Penggaron, Jawa Timur, Indonesia",,,,,,,,Kesamben Kulon,,,,,,Mangkujajar,,,,"Turen, Jawa Timur, Indonesia",,,,,,Pucuk
+Nyamplungan,,"Perak, Jawa Timur, Indonesia",,,,,,,,"Kesamben-kulon, East Java",,,,,,"Mantup, East Java ",,,,"Turi 2, East Java",,,,,,Pugeran
+Pacar Keling,,"Pesanggrahan, Gudo",,,,,,,,Kesambenwetan,,,,,,"Mantup, Jawa Timur, Indonesia",,,,"Turi Satu, East Java",,,,,,"Pugeran, Jawa Timur, Indonesia"
+Pacar Kembang,,"Pesantren, Tembelang",,,,,,,,"Kesamben-wetan, East Java",,,,,,Manyar,,,,"Turiredjo 2, East Java",,,,,,Puloniti
+"Pagesangan, Jawa Timur, Indonesia",,Plabuhan,,,,,,,,Ketanen,,,,,,Maor,,,,Turirejo,,,,,,Pulorejo
+"Pakal, Jawa Timur, Indonesia",,Plandi,,,,,,,,Ketapang Lor,,,,,,Margoanyar,,,,"Turirejo Satu, East Java",,,,,,Pungging
+"Pakis, East Java",,"Plasa, East Java",,,,,,,,Kisik,,,,,,Mayong,,,,"Ubalan, East Java",,,,,,"Pungging, Jawa Timur, Indonesia"
+Panjang Jiwo,,Plemahan,,,,,,,,Klampok,,,,,,Medalem,,,,"Ukir, East Java",,,,,,Punggul
+Pegirian,,Plosogeneng,,,,,,,,"Klampok, East Java",,,,,,Medang,,,,Undaan,,,,,,Puri
+"Penjaringansari, Jawa Timur, Indonesia",,Plosogenuk,,,,,,,,Klangonan,,,,,,Mekanderejo,,,,"Undaan 1, East Java",,,,,,Purwojati
+Perak Barat,,"Plosokerep, Sumobito",,,,,,,,Klotok,,,,,,Meluntur,,,,"Urekurek, East Java",,,,,,Purwotengah
+Perak Timur,,Plumbon Gambang,,,,,,,,Kota Kusuma,,,,,,Meluwur,,,,"Urungurung, East Java",,,,,,Randegan
+Perak Utara,,Podoroto,,,,,,,,Kramat,,,,,,Mendogo,,,,"Wajak, Jawa Timur, Indonesia",,,,,,Randubango
+Petemon,,Pojok Kulon,,,,,,,,Kramat Kulon,,,,,,Menganti,,,,"Wanakerta 1, East Java",,,,,,Randugenengan
+"Petireman, East Java",,Pojok Rejo,,,,,,,,Kramatinggil,,,,,,Menongo,,,,"Wandanpuro, East Java",,,,,,Randuharjo
+"Ploso, Jawa Timur, Indonesia",,Pucang Simo,,,,,,,,Krikilan,,,,,,Mertani,,,,"Watesbelung, East Java",,,,,,Sadartengah
+Pradah Kalikendal,,Pulo Gedang,,,,,,,,Kroman,,,,,,Miru,,,,"Watugede, Jawa Timur, Indonesia",,,,,,Sajen
+Pucang Sewu,,Pulo Lor,,,,,,,,Kumalasa,,,,,,"Modo, East Java ",,,,"Watugedek, East Java",,,,,,Salen
+"Pucanganom, Jawa Timur, Indonesia",,Pundong,,,,,,,,Laban,,,,,,"Modo, Jawa Timur, Indonesia",,,,"Wonokasiah, East Java",,,,,,Sambilawang
+"Pucangsewu, Jawa Timur, Indonesia",,Purisemanding,,,,,,,,Lampah,,,,,,Mojo Asem,,,,Wonorejo ,,,,,,Sambiroto
+Putat Jaya,,Puton,,,,,,,,Lasem,,,,,,Moro,,,,"Wotogalih, East Java",,,,,,"Sambiroto-kulon, East Java"
+"Putat-Gede, Jawa Timur, Indonesia",,Randuwatang,,,,,,,,Lebak,,,,,,Morocalan,,,,"Wringinsongo, East Java",,,,,,Sampangagung
+"Raci, East Java",,Rejoslamet,,,,,,,,Lebanisuko,,,,,,Moronyamplung,,,,"Wunut, Jawa Timur, Indonesia",,,,,,Sarirejo
+"Rangkah, Jawa Timur, Indonesia",,Rejoso Pinggir,,,,,,,,Lebaniwaras,,,,,,Moropelang,,,,"Parangas Tiga, East Java",,,,,,Sawahan
+"Romokalisari, Benowo",,Sambirejo ,,,,,,,,Lengkong,,,,,,Mragel,,,,"Srigading, Jawa Timur, Indonesia",,,,,,Sawo
+"Rungkut Kidul, Jawa Timur, Indonesia",,Sambirrejo,,,,,,,,Leran,,,,,,Mungli,,,,"Penggung, East Java",,,,,,Sedati
+Rungkut Menanggal,,Sambong Dukuh,,,,,,,,Lowayu,,,,,,Munungrejo,,,,,,,,,,Seduri
+Rungkut Tengah,,Sawiji,,,,,,,,Lumpur,,,,,,Ngambeg,,,,,,,,,,Segunung
+"Rungkut, East Java",,Sebani,,,,,,,,Lundo,,,,,,Ngarum,,,,,,,,,,Sekargadung
+Sambi Kerep,,Segodorejo,,,,,,,,Madumulyorejo,,,,,,Ngasem Lemahbang,,,,,,,,,,Seloliman
+"Sawahan, East Java",,Seketi,,,,,,,,"Mandu, East Java",,,,,,Ngayung,,,,,,,,,,Selotapak
+Sawunggaling,,"Selorejo, Jawa Timur, Indonesia",,,,,,,,Manyar,,,,,,"Ngimbang, East Java ",,,,,,,,,,Sentanan
+Sememi,,"Semboeng, East Java",,,,,,,,Manyar Sidomukti,,,,,,Nglebur,,,,,,,,,,
+"Semolowaru, Jawa Timur, Indonesia",,Sembung,,,,,,,,Manyar Sidorukun,,,,,,Ngujungrejo,,,,,,,,,,
+Sidodadi  ,,Senden,,,,,,,,"Manyar, Jawa Timur, Indonesia",,,,,,Nguwok,,,,,,,,,,"Simo, East Java"
+"Sidosermo, Jawa Timur, Indonesia",,"Sengon, Jombang",,,,,,,,Manyarejo,,,,,,Nogojatisari,,,,,,,,,,
+Sidotopo Wetan,,"Sentul, Tembelang",,,,,,,,"Manyarrejo, East Java",,,,,,"Paciran, East Java ",,,,,,,,,,
+"Sidotopo, Jawa Timur, Indonesia",,Sepanyul,,,,,,,,Masangan,,,,,,Padenganploso,,,,,,,,,,Sooko
+Simolawang,,Sidokaton,,,,,,,,Melirang,,,,,,Pajangan,,,,,,,,,,
+"Simomulyo, Jawa Timur, Indonesia",,Sidokerto,,,,,,,,Menganti,,,,,,Paji,,,,,,,,,,
+"Simowahu, East Java",,"Sidomulyo, Megaluh",,,,,,,,Mentaras,,,,,,Palangan,,,,,,,,,,
+Siwalankerto,,Sidowarek,,,,,,,,Menunggal,,,,,,Paloh,,,,,,,,,,
+"Sonokwijenan, Jawa Timur, Indonesia",,Sudimoro,,,,,,,,"Mertani, Jawa Timur, Indonesia",,,,,,Pamotan,,,,,,,,,,
+South Krembangan,,Sugihwaras ,,,,,,,,Metatu,,,,,,Pandanpancur,,,,,,,,,,Sumbertanggul
+"Sukolilo, East Java",,Sukodadi ,,,,,,,,Mojoasem,,,,,,Pangean,,,,,,,,,,"Sumberwuluh, Jawa Timur, Indonesia"
+Sumber Rejo,,Sukoiber,,,,,,,,Mojogede,,,,,,Panggang,,,,,,,,,,"Tangunan, Jawa Timur, Indonesia"
+"Sumberjo, Jawa Timur, Indonesia",,Sukopinggir,,,,,,,,Mojopetung,,,,,,Pangkatrejo,,,,,,,,,,"Tinggalbuntul, East Java"
+Sumur Welut,,Sukorejo     ,,,,,,,,Mojopuro Gede,,,,,,Parengan,,,,,,,,,,"Trawas, Jawa Timur, Indonesia"
+"Sumurwelut, East Java",,Sukosari  ,,,,,,,,Mojopuro Wetan,,,,,,Pasarlegi,,,,,,,,,,"Trewa, East Java"
+"Surabaya, Indonesia",,Sumber Agung,,,,,,,,"Mojopuro-gede, East Java",,,,,,Pasi,,,,,,,,,,Wates
+"Tambak Langon Jawa Timur, Indonesia",,"Sumber Gondang, Kabuh",,,,,,,,"Mojopuro-wetan, East Java",,,,,,Pataan,,,,,,,,,,"Watukenongo, East Java"
+Tambak Osowilangon,,Sumber Nongko,,,,,,,,Mojosarirejo,,,,,,Patihan,,,,,,,,,,Wonokusumo 
+Tambak Wedi,,"Sumber Teguh, Kudu",,,,,,,,"Mojosarirejo, East Java",,,,,,Pelang,,,,,,,,,,
+"Tambakdana, East Java",,Sumberagung,,,,,,,,Mojotengah,,,,,,"Pelang, East Java",,,,,,,,,,
+Tambakdono,,Sumberagung  ,,,,,,,,"Mojotengah, East Java",,,,,,Pelangwot,,,,,,,,,,
+"Tambakosowilangun, East Java",,"Sumberjae, East Java",,,,,,,,Mojowuku,,,,,,Pendowokumpul,,,,,,,,,,
+Tambakrejo,,Sumberjo,,,,,,,,Mondoluku,,,,,,Pendowolimo,,,,,,,,,,
+"Tambaksari, East Java",,Sumberjo ,,,,,,,,"Mondoluku, East Java",,,,,,Pengangsalan,,,,,,,,,,
+"Tambaksarioso, East Java",,Sumbermulyo,,,,,,,,Morobakung,,,,,,Pengumbulanadi,,,,,,,,,,
+Tanah Kali Kedinding,,"Sumberpenganten, East Java",,,,,,,,Morowudi,,,,,,Plabuhanrejo,,,,,,,,,,
+Tandes,,Sumberrejo  ,,,,,,,,Mriyunan,,,,,,Plosobuden,,,,,,,,,,
+Tandes Kidul,,Sumberringin,,,,,,,,Mulung,,,,,,Plososetro,,,,,,,,,,
+Tandes Kidul 1,,"Sumbersari, Megaluh",,,,,,,,Munggugebang,,,,,,Plosowahyu,,,,,,,,,,
+Tandes Lor 2,,"Sumobito, Jawa Timur, Indonesia",,,,,,,,Munggugianti,,,,,,Plumpang,,,,,,,,,,
+"Tanjoeng Perak, East Java",,Talun Kidul,,,,,,,,Ngabetan,,,,,,Pomahan Janggan,,,,,,,,,,
+Tanjungsari,,Tambak Rejo,,,,,,,,"Ngablak 2, East Java",,,,,,Porodeso,,,,,,,,,,
+"Tegalsari, East Java",,"Tambar, Jogoroto",,,,,,,,"Ngablak, East Java",,,,,,Prijek Ngablag,,,,,,,,,,
+Tembok Dukuh,,Tamping Mojo,,,,,,,,Ngampel,,,,,,Primpen,,,,,,,,,,
+"Tenggilis Mejoyo, East Java",,Tanggalrejo,,,,,,,,"Ngampel, East Java",,,,,,Pringgoboyo,,,,,,,,,,
+"Tenggulunan, East Java",,Tanggung Kramat,,,,,,,,Ngargosari,,,,,,Priyoso,,,,,,,,,,
+"Tubanan, Jawa Timur, Indonesia",,Tanggungan,,,,,,,,Ngasin,,,,,,Pucakwangi,,,,,,,,,,
+"Ujung, Jawa Timur, Indonesia",,Tanjung Gunung,,,,,,,,Ngawen,,,,,,Pucangro,,,,,,,,,,
+Warugunung,,Tanjung Wadung,,,,,,,,"Ngembes, East Java",,,,,,Pucangtelu,,,,,,,,,,
+"Warugunung, East Java",,"Tapen, Jawa Timur, Indonesia",,,,,,,,Ngemboh,,,,,,"Pucuk, East Java ",,,,,,,,,,
+"Watulawang, East Java",,Tebel,,,,,,,,"Ngembuh, East Java",,,,,,"Pucuk, Jawa Timur, Indonesia",,,,,,,,,,
+"Wiyung, East Java",,Tejo,,,,,,,,Ngembung,,,,,,Putatbangah,,,,,,,,,,
+"Wonocolo, East Java",,"Tembelang, Jawa Timur, Indonesia",,,,,,,,"Ngembung, East Java",,,,,,Putatkumpul,,,,,,,,,,
+"Wonokerto, Jawa Timur, Indonesia",,Temuwulan,,,,,,,,Ngepung,,,,,,Puter,,,,,,,,,,
+"Wonokromo, East Java",,Tengaran,,,,,,,,Ngipik,,,,,,Rancang Kencono,,,,,,,,,,
+Wonokusumo,,Tinggar,,,,,,,,Pacuh,,,,,,Randubener,,,,,,,,,,
+"Wonorejo, Rungkut",,"Tjukir, East Java",,,,,,,,Padang Bandung,,,,,,Rayunggumuk,,,,,,,,,,
+,,Tondowulan,,,,,,,,Padeg,,,,,,Rejotengah (Tejotengah),,,,,,,,,,
+,,Trawasan,,,,,,,,Palebon,,,,,,Rumpuk,,,,,,,,,,
+,,"Trowulan, Jawa Timur, Indonesia",,,,,,,,Panceng,,,,,,Sambangan,,,,,,,,,,
+,,Tugusumberjo,,,,,,,,Pandanan,,,,,,Sambangrejo,,,,,,,,,,
+,,Tunggorono,,,,,,,,Pandu,,,,,,"Sambeng, East Java ",,,,,,,,,,
+,,Turi Pinggir,,,,,,,,Pangkah Kulon,,,,,,Sambopinggir,,,,,,,,,,
+,,"Wangkal, East Java",,,,,,,,Pangkah Wetan,,,,,,Sambungrejo,,,,,,,,,,
+,,Wangkalkepuh,,,,,,,,"Pangkah, East Java",,,,,,Sedayulawas,,,,,,,,,,
+,,Watu Dakon,,,,,,,,"Pangkah-kulon, East Java",,,,,,"Sekaran, East Java ",,,,,,,,,,
+,,Watugaluh,,,,,,,,"Pangkah-wetan, East Java",,,,,,"Sekaran, Jawa Timur, Indonesia",,,,,,,,,,
+,,"Wonokerso, East Java",,,,,,,,Panjunan,,,,,,Sekarbagus,,,,,,,,,,
+,,"Wonokerto, Wonosalam",,,,,,,,Pantenan,,,,,,Sekidang,,,,,,,,,,
+,,Wonomerto,,,,,,,,Pasinan Lemahputih,,,,,,Selorejo,,,,,,,,,,
+,,"Wonosalam, Jawa Timur, Indonesia",,,,,,,,"Pasinanlemahpoetih, East Java",,,,,,Semampirejo,,,,,,,,,,
+,,"Wonosari, Jawa Timur, Indonesia",,,,,,,,Patarselamat,,,,,,Sendangagung,,,,,,,,,,
+,,Wringinpitu,,,,,,,,Pedagangan,,,,,,Sendangduwur,,,,,,,,,,
+,,Wuluh,,,,,,,,Peganden,,,,,,Sendangrejo,,,,,,,,,,
+,,,,,,,,,,Pegundan,,,,,,"Sentul, East Java",,,,,,,,,,
+,,,,,,,,,,Pejangganan,,,,,,Sewor,,,,,,,,,,
+,,,,,,,,,,Pekalongan,,,,,,Sidobangun,,,,,,,,,,
+,,,,,,,,,,Pekauman,,,,,,Sidobinangun,,,,,,,,,,
+,,,,,,,,,,Pekelingan,,,,,,Sidobogem,,,,,,,,,,
+,,,,,,,,,,"Pelakaran, East Java",,,,,,Sidodowo,,,,,,,,,,
+,,,,,,,,,,"Pelemdadol, East Java",,,,,,Sidogembul,,,,,,,,,,
+,,,,,,,,,,Pelemwatu,,,,,,Sidokelar,,,,,,,,,,
+,,,,,,,,,,Pengalangan,,,,,,Sidokumpul,,,,,,,,,,
+,,,,,,,,,,"Pengampon, East Java",,,,,,Sidomlangean,,,,,,,,,,
+,,,,,,,,,,Pengulu,,,,,,Sidomukti,,,,,,,,,,
+,,,,,,,,,,Peromaan (Paromaan),,,,,,"Siman, East Java",,,,,,,,,,
+,,,,,,,,,,"Pesantren, East Java",,,,,,"Simongagrok, East Java",,,,,,,,,,
+,,,,,,,,,,Petiken,,,,,,"Soko, Jawa Timur, Indonesia",,,,,,,,,,
+,,,,,,,,,,"Petiken, East Java",,,,,,"Sugio, East Java ",,,,,,,,,,
+,,,,,,,,,,"Petis, East Java",,,,,,"Sukobendu, East Java, Indonesia",,,,,,,,,,
+,,,,,,,,,,Petisbenem,,,,,,"Sukodadi, East Java ",,,,,,,,,,
+,,,,,,,,,,Petiyin Tunggal,,,,,,"Sukodadi, Jawa Timur, Indonesia",,,,,,,,,,
+,,,,,,,,,,Petung,,,,,,Sukomulyo,,,,,,,,,,
+,,,,,,,,,,Pinggir,,,,,,Sukorejo  ,,,,,,,,,,
+,,,,,,,,,,"Plasakerep, East Java",,,,,,"Taban, East Java",,,,,,,,,,
+,,,,,,,,,,"Ploso-lor, East Java",,,,,,"Tanggungprigel, East Java",,,,,,,,,,
+,,,,,,,,,,"Pojok, East Java",,,,,,"Tikung, East Java ",,,,,,,,,,
+,,,,,,,,,,Pongangan,,,,,,Tlogoanyar,,,,,,,,,,
+,,,,,,,,,,Prambangan,,,,,,"Turi, East Java",,,,,,,,,,
+,,,,,,,,,,Pranti,,,,,,"Turi, Jawa Timur, Indonesia",,,,,,,,,,
+,,,,,,,,,,Prupuh,,,,,,"Wanareja, East Java",,,,,,,,,,
+,,,,,,,,,,Pucung,,,,,,"Wedoro, East Java",,,,,,,,,,
+,,,,,,,,,,Pudakit Barat,,,,,,"Wudi, East Java",,,,,,,,,,
+,,,,,,,,,,Pudakit Timur,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Pule, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Pulopancikan,,,,,,,,,,,,,,,,
+,,,,,,,,,,Punduttrate,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Punduttrate, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Purwodadi,,,,,,,,,,,,,,,,
+,,,,,,,,,,Putat Lor,,,,,,,,,,,,,,,,
+,,,,,,,,,,Racikulon,,,,,,,,,,,,,,,,
+,,,,,,,,,,Racitengah,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Raci-tengah, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Raciwetan,,,,,,,,,,,,,,,,
+,,,,,,,,,,Randegansari,,,,,,,,,,,,,,,,
+,,,,,,,,,,Randuagung,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Randuagung, Jawa Timur, Indonesia",,,,,,,,,,,,,,,,
+,,,,,,,,,,Randuboto,,,,,,,,,,,,,,,,
+,,,,,,,,,,Randupadangan,,,,,,,,,,,,,,,,
+,,,,,,,,,,Roomo,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sambipondok,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sambogunung,,,,,,,,,,,,,,,,
+,,,,,,,,,,Samirplapan,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Sampean, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Sangkapura,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sawahmulya,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sawo,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Sawo, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Sedagaran,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sedapurklagen,,,,,,,,,,,,,,,,
+,,,,,,,,,,Segoromadu,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sekapuk,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Sekaran-kidul, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Sekargadung,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sekarkurung,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sekarputih,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Semambung-kulon, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,"Semambung-wetan, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Semampir,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Semampir, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Sembayat,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sembung,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sembung Anyar,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sembungan Kidul,,,,,,,,,,,,,,,,
+,,,,,,,,,,Serah,,,,,,,,,,,,,,,,
+,,,,,,,,,,Setro,,,,,,,,,,,,,,,,
+,,,,,,,,,,Setrohadi,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sidayu,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sidogedung Batu,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sidojangkung,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sidokumpul,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Sidokumpul, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Sidomoro,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sidomukti,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sidomulyo,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sidoraharjo,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sidorejo,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Sidorejo, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Sidorukun,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sidorukun,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sidowungu,,,,,,,,,,,,,,,,
+,,,,,,,,,,Singosari,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sirnoboyo,,,,,,,,,,,,,,,,
+,,,,,,,,,,Siwalan,,,,,,,,,,,,,,,,
+,,,,,,,,,,Slempit,,,,,,,,,,,,,,,,
+,,,,,,,,,,Soko (Sooko),,,,,,,,,,,,,,,,
+,,,,,,,,,,Srowo,,,,,,,,,,,,,,,,
+,,,,,,,,,,Suci,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Suci, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Sukalela,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sukaoneng,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sukoanyar,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sukodono,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sukomulyo,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sukorame,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Sukorame, Jawa Timur, Indonesia",,,,,,,,,,,,,,,,
+,,,,,,,,,,Sukorejo,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sukowati,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sumari,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sumberame,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sumberejo,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sumbergede,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Sumbergondang, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Sumberwaru,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sumengko,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Sumengko, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Sumput,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Sumput, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Sumurber,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sungai Rujing,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sungai Teluk,,,,,,,,,,,,,,,,
+,,,,,,,,,,Sungonlegowo,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Sungonlegowo, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Surowiti,,,,,,,,,,,,,,,,
+,,,,,,,,,,Suwari,,,,,,,,,,,,,,,,
+,,,,,,,,,,Tajung Widoro,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Talun, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Tambak,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Tambak, Jawa Timur, Indonesia",,,,,,,,,,,,,,,,
+,,,,,,,,,,Tambakberas,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Tambakberas 2, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,"Tambakberas Satu, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Tambakrejo,,,,,,,,,,,,,,,,
+,,,,,,,,,,Tanahlandean,,,,,,,,,,,,,,,,
+,,,,,,,,,,Tanggulrejo,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Tanggungan, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Tanjangawan,,,,,,,,,,,,,,,,
+,,,,,,,,,,Tanjung,,,,,,,,,,,,,,,,
+,,,,,,,,,,Tanjungan,,,,,,,,,,,,,,,,
+,,,,,,,,,,Tanjungori,,,,,,,,,,,,,,,,
+,,,,,,,,,,Tebalo,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Tebalo, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Tebaloan,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Tebaloan, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Tebuwung,,,,,,,,,,,,,,,,
+,,,,,,,,,,Teluk Jatidawang,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Tempel 2, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Tenaru,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Tenger, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Tenggor,,,,,,,,,,,,,,,,
+,,,,,,,,,,Tenggulunan,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Terungwangi, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Tirem,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Tirem, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Tiremenggal,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Tjermen, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,"Tjermenlerek, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,"Tlanak, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,"Tlapok, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Tlogobendung,,,,,,,,,,,,,,,,
+,,,,,,,,,,Tlogobendung,,,,,,,,,,,,,,,,
+,,,,,,,,,,Tlogopatut,,,,,,,,,,,,,,,,
+,,,,,,,,,,Tlogopatut,,,,,,,,,,,,,,,,
+,,,,,,,,,,Tlogopojok,,,,,,,,,,,,,,,,
+,,,,,,,,,,Tlogopojok,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Traseng, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Trate,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Trate Gresik, Gresik",,,,,,,,,,,,,,,,
+,,,,,,,,,,"Trate, Gresik",,,,,,,,,,,,,,,,
+,,,,,,,,,,"Trate, Jawa Timur, Indonesia",,,,,,,,,,,,,,,,
+,,,,,,,,,,"Tugu, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Tulung,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Tulung 1, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Tumapel,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Tumpang, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Turirejo,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Turirejo, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Ujung Pangkah,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Ujungpangkah, Jawa Timur, Indonesia",,,,,,,,,,,,,,,,
+,,,,,,,,,,Wadak Kidul,,,,,,,,,,,,,,,,
+,,,,,,,,,,Wadak Lor,,,,,,,,,,,,,,,,
+,,,,,,,,,,Wadeng,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Wadung, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Wahas,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Wanakasian, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,"Watang, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Watestanjung,,,,,,,,,,,,,,,,
+,,,,,,,,,,Watuagung,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Watuagung, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,"Watugadjah, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,"Watu-wetan, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Wedani,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Wedani, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,"Wedara-kulon, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,"Wedoroanam, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Wedoroanom,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Windu Dua, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Wonokerto,,,,,,,,,,,,,,,,
+,,,,,,,,,,Wonorejo,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Wonosari 3, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Wotan,,,,,,,,,,,,,,,,
+,,,,,,,,,,Wotansari,,,,,,,,,,,,,,,,
+,,,,,,,,,,Wringin Anom,,,,,,,,,,,,,,,,
+,,,,,,,,,,Wringinanom,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Wringinanom, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,"Wringinkurung, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,"Wringinwoh, East Java",,,,,,,,,,,,,,,,
+,,,,,,,,,,Yosowilangun,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Yosowilangun, Jawa Timur, Indonesia",,,,,,,,,,,,,,,,
