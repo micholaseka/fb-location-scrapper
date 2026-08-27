@@ -3,12 +3,43 @@
   "version": "1.0.0",
   "description": "Facebook Marketplace location autocomplete scraper",
   "type": "module",
-  "main": "scraper.js",
+  "main": "electron/main.cjs",
   "scripts": {
-    "start": "node scraper.js"
+    "start": "electron electron/main.cjs",
+    "build:linux": "electron-builder --linux AppImage",
+    "build:win": "electron-builder --win nsis"
   },
   "dependencies": {
     "csv-parse": "^7.0.2",
     "playwright": "^1.62.0"
+  },
+  "devDependencies": {
+    "electron": "^44.0.0",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.micholaseka.fblocationscrapper",
+    "productName": "FB Location Scrapper",
+    "files": [
+      "electron/**/*",
+      "renderer/**/*",
+      "scraper.js",
+      "csvWriter.js",
+      "package.json"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Utility"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
   }
 }

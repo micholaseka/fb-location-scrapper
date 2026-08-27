@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FB Location Scrapper</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1>FB Location Scrapper</h1>
+        <p>Facebook Marketplace Location Scraper</p>
+      </header>
+
+      <main>
+        <section class="card">
+          <h2>Input CSV</h2>
+
+          <div class="file-row">
+            <input
+              id="csvPath"
+              type="text"
+              placeholder="Pilih file CSV..."
+              readonly
+            />
+
+            <button id="selectCsv">Pilih CSV</button>
+          </div>
+
+          <div class="buttons">
+            <button id="startButton" class="primary">▶ Mulai Scraping</button>
+
+            <button id="stopButton" class="danger" disabled>■ Stop</button>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="section-title">
+            <h2>Progress</h2>
+
+            <span id="status"> Siap </span>
+          </div>
+
+          <div class="progress-container">
+            <div id="progressBar" class="progress-bar"></div>
+          </div>
+
+          <div class="progress-info">
+            <span id="progressText"> 0 / 0 </span>
+
+            <span id="progressPercent"> 0% </span>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Log Bot</h2>
+
+          <div id="logContainer" class="log-container">
+            <div class="log">Sistem siap digunakan.</div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

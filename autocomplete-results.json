@@ -3,23 +3,47 @@
     "keyword": "61111",
     "results": [
       {
-        "name": "Nagapattinam, India",
-        "detail": "2 people checked in here"
+        "name": "San Francisco, California",
+        "detail": "City"
       },
       {
-        "name": "Nagapattinam, India",
-        "detail": "2 people checked in here"
+        "name": "San Francisco, California",
+        "detail": "City"
       },
       {
-        "name": "61-111 Poznan, Poland",
-        "detail": "Poznan, Poland · 1 person checked in here"
+        "name": "South San Francisco, California",
+        "detail": "City"
       },
       {
-        "name": "61-111 Poznan, Poland",
-        "detail": "Poznan, Poland · 1 person checked in here"
+        "name": "South San Francisco, California",
+        "detail": "City"
+      },
+      {
+        "name": "Downtown South San Francisco",
+        "detail": "Downtown South San Francisco, CA, US · 5,996 people checked in here"
+      },
+      {
+        "name": "Downtown South San Francisco",
+        "detail": "Downtown South San Francisco, CA, US · 5,996 people checked in here"
+      },
+      {
+        "name": "Financial District",
+        "detail": "Financial District, CA, US · 56,934 people checked in here"
+      },
+      {
+        "name": "Financial District",
+        "detail": "Financial District, CA, US · 56,934 people checked in here"
+      },
+      {
+        "name": "Parkmerced",
+        "detail": "Parkmerced, CA, US · 4,125 people checked in here"
+      },
+      {
+        "name": "Parkmerced",
+        "detail": "Parkmerced, CA, US · 4,125 people checked in here"
       }
     ],
-    "resultCount": 4,
+    "resultCount": 10,
     "status": "success"
   },
   {
@@ -69,82 +93,6 @@
       },
       {
         "name": "61114 Rannu Parish",
-        "detail": "Rannu Parish · 0 people checked in here"
-      }
-    ],
-    "resultCount": 4,
-    "status": "success"
-  },
-  {
-    "keyword": "61115",
-    "results": [
-      {
-        "name": "Machesney Park, IL, US 61115",
-        "detail": "Machesney Park, IL, US · 20 people checked in here"
-      },
-      {
-        "name": "Machesney Park, IL, US 61115",
-        "detail": "Machesney Park, IL, US · 20 people checked in here"
-      },
-      {
-        "name": "61115 Rannu Parish",
-        "detail": "Rannu Parish · 0 people checked in here"
-      },
-      {
-        "name": "61115 Rannu Parish",
-        "detail": "Rannu Parish · 0 people checked in here"
-      }
-    ],
-    "resultCount": 4,
-    "status": "success"
-  },
-  {
-    "keyword": "61116",
-    "results": [
-      {
-        "name": "61116 Rannu Parish",
-        "detail": "Rannu Parish · 0 people checked in here"
-      },
-      {
-        "name": "61116 Rannu Parish",
-        "detail": "Rannu Parish · 0 people checked in here"
-      }
-    ],
-    "resultCount": 2,
-    "status": "success"
-  },
-  {
-    "keyword": "61117",
-    "results": [
-      {
-        "name": "61117 Rannu Parish",
-        "detail": "Rannu Parish · 0 people checked in here"
-      },
-      {
-        "name": "61117 Rannu Parish",
-        "detail": "Rannu Parish · 0 people checked in here"
-      }
-    ],
-    "resultCount": 2,
-    "status": "success"
-  },
-  {
-    "keyword": "61118",
-    "results": [
-      {
-        "name": "61118 Bad Vilbel, Germany",
-        "detail": "Bad Vilbel, Germany · 34 people checked in here"
-      },
-      {
-        "name": "61118 Bad Vilbel, Germany",
-        "detail": "Bad Vilbel, Germany · 34 people checked in here"
-      },
-      {
-        "name": "61118 Rannu Parish",
-        "detail": "Rannu Parish · 0 people checked in here"
-      },
-      {
-        "name": "61118 Rannu Parish",
         "detail": "Rannu Parish · 0 people checked in here"
       }
     ],

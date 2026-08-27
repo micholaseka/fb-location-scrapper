@@ -1,0 +1,5 @@
+node_modules/
+*.exe
+.env
+node_modules
+dist/
