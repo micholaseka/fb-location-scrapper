@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import readline from "node:readline";
 import { parse } from "csv-parse/sync";
+import { writeResultsCsv } from "./csvWriter.js";
 
 const FACEBOOK_URL = "https://www.facebook.com/marketplace/";
 
@@ -13,6 +14,7 @@ const MAX_RETRIES = 2;
 const RETRY_DELAY = 2000;
 
 const OUTPUT_FILE = path.resolve("autocomplete-results.json");
+const CSV_OUTPUT_FILE = path.resolve("scraped-locations.csv");
 const ERROR_FILE = path.resolve("scraper-errors.json");
 
 /*
@@ -37,7 +39,7 @@ function ask(question) {
 
 /*
 |--------------------------------------------------------------------------
-| CSV
+| CSV INPUT
 |--------------------------------------------------------------------------
 */
 
@@ -124,9 +126,6 @@ function extractLocations(csvText) {
 
   const firstRow = rows[0];
 
-  /*
-   * CSV menggunakan header.
-   */
   if (looksLikeHeader(firstRow)) {
     const columnIndex = findLocationColumn(firstRow);
 
@@ -140,10 +139,6 @@ function extractLocations(csvText) {
       .filter(Boolean);
   }
 
-  /*
-   * CSV tanpa header.
-   * Gunakan kolom pertama.
-   */
   return rows.map((row) => String(row[0] ?? "").trim()).filter(Boolean);
 }
 
@@ -169,9 +164,7 @@ async function loadLocations() {
   console.log(`📁 CSV: ${csvPath}`);
 
   const csvText = fs.readFileSync(csvPath, "utf8");
-
   const locations = extractLocations(csvText);
-
   const uniqueLocations = [...new Set(locations)];
 
   if (uniqueLocations.length === 0) {
@@ -206,29 +199,15 @@ function saveErrors(errors) {
 async function scrapeAutocomplete(page, locationInput, keyword) {
   await locationInput.click();
 
-  /*
-   * Bersihkan input.
-   */
   await locationInput.selectText();
   await locationInput.fill("");
-
-  /*
-   * Isi lokasi.
-   */
   await locationInput.fill(keyword);
 
   console.log(`⌨️ Input: ${keyword}`);
 
-  /*
-   * Tunggu Facebook.
-   */
   await page.waitForTimeout(AUTOCOMPLETE_WAIT);
 
-  /*
-   * Cari autocomplete.
-   */
   const options = page.locator('[role="option"]:visible');
-
   const count = await options.count();
 
   console.log(`📋 Option ditemukan: ${count}`);
@@ -237,11 +216,8 @@ async function scrapeAutocomplete(page, locationInput, keyword) {
 
   for (let i = 0; i < count; i++) {
     const option = options.nth(i);
-
     const spans = option.locator("span");
-
     const spanCount = await spans.count();
-
     const values = [];
 
     for (let j = 0; j < spanCount; j++) {
@@ -288,12 +264,10 @@ async function scrapeWithRetry(page, locationInput, keyword) {
       lastError = error;
 
       console.error(`❌ Percobaan ${attempt} gagal:`);
-
       console.error(error.message);
 
       if (attempt <= MAX_RETRIES) {
         console.log(`⏳ Retry dalam ${RETRY_DELAY}ms...`);
-
         await page.waitForTimeout(RETRY_DELAY);
       }
     }
@@ -348,14 +322,10 @@ async function main() {
     });
 
     console.log("✅ Marketplace terbuka.");
-
     console.log("🔐 Login Facebook jika diperlukan.");
 
     await page.waitForTimeout(5000);
 
-    /*
-     * Input lokasi.
-     */
     const locationInput = page
       .locator('input[role="combobox"][aria-label="Location"]')
       .first();
@@ -367,22 +337,13 @@ async function main() {
 
     console.log("✅ Input Location ditemukan.");
 
-    /*
-     * ==================================================
-     * MAIN LOOP
-     * ==================================================
-     */
-
     for (let i = 0; i < locations.length; i++) {
       const keyword = locations[i];
 
       console.log("");
       console.log("========================================");
-
       console.log(`📍 ${i + 1}/${locations.length}`);
-
       console.log(`🔎 ${keyword}`);
-
       console.log("========================================");
 
       const response = await scrapeWithRetry(page, locationInput, keyword);
@@ -409,10 +370,6 @@ async function main() {
 
         console.log(`❌ Gagal: ${keyword}`);
 
-        /*
-         * Tetap masukkan record supaya
-         * status lokasi tetap diketahui.
-         */
         results.push({
           keyword,
           results: [],
@@ -421,25 +378,14 @@ async function main() {
         });
       }
 
-      /*
-       * Simpan setiap lokasi.
-       *
-       * Kalau program mati,
-       * data sebelumnya tetap ada.
-       */
       saveResults(results);
       saveErrors(errors);
+      writeResultsCsv(results, CSV_OUTPUT_FILE);
 
-      console.log("💾 Progress tersimpan.");
+      console.log("💾 JSON + CSV progress tersimpan.");
 
       await page.waitForTimeout(BETWEEN_LOCATION_WAIT);
     }
-
-    /*
-     * ==================================================
-     * SUMMARY
-     * ==================================================
-     */
 
     const successCount = results.filter(
       (item) => item.status === "success",
@@ -456,24 +402,16 @@ async function main() {
 
     console.log("");
     console.log("========================================");
-
     console.log("🏁 SCRAPING SELESAI");
-
     console.log("========================================");
-
     console.log(`📍 Total lokasi : ${locations.length}`);
-
     console.log(`✅ Berhasil     : ${successCount}`);
-
     console.log(`❌ Gagal        : ${failedCount}`);
-
     console.log(`📋 Total hasil  : ${totalAutocomplete}`);
-
     console.log("");
-    console.log(`💾 Results : ${OUTPUT_FILE}`);
-
+    console.log(`💾 CSV     : ${CSV_OUTPUT_FILE}`);
+    console.log(`💾 JSON    : ${OUTPUT_FILE}`);
     console.log(`⚠️ Errors  : ${ERROR_FILE}`);
-
     console.log("");
     console.log("⏳ Browser tetap terbuka.");
 
