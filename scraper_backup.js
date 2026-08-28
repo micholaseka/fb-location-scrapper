@@ -19,62 +19,6 @@ const ERROR_FILE = path.resolve("scraper-errors.json");
 
 /*
 |--------------------------------------------------------------------------
-| PROFIL BROWSER PERSISTEN
-|--------------------------------------------------------------------------
-|
-| Folder ini menyimpan cookies, localStorage, dan session Facebook —
-| persis seperti profil Chrome/Firefox biasa. Dengan ini, setelah
-| login manual SATU KALI, bot akan tetap login di sesi berikutnya
-| tanpa perlu login ulang, selama folder ini tidak dihapus.
-|
-| PENTING: folder ini berisi data sesi login akun Facebook — jangan
-| pernah di-commit ke git atau dibagikan ke orang lain (sudah
-| ditambahkan ke .gitignore).
-|
-*/
-const USER_DATA_DIR = path.resolve("browser-profile");
-
-/*
-|--------------------------------------------------------------------------
-| SELECTOR LOKASI (BILINGUAL)
-|--------------------------------------------------------------------------
-|
-| Facebook menampilkan UI dalam Bahasa Indonesia ATAU Bahasa Inggris
-| tergantung akun/browser. Selector di bawah ini sengaja ditulis
-| dengan format "selectorA, selectorB" (koma) supaya Playwright
-| mencari elemen yang cocok dengan SALAH SATU dari keduanya —
-| jadi bot tetap jalan baik saat UI Indonesia maupun Inggris.
-|
-| CATATAN: kita SENGAJA tidak pakai class CSS Facebook (mis. "x193iq5w")
-| karena class itu acak dan berubah tiap Facebook deploy versi baru.
-| Kita pakai aria-label & role karena itu jauh lebih stabil.
-|
-*/
-
-// Tombol trigger di sidebar Marketplace, bentuknya:
-// <div role="button" aria-label="Lokasi: <nama tempat>, Dalam <radius>">
-// Kita pakai "starts with" (^=) karena nama tempat & radius di
-// dalam aria-label selalu berubah-ubah, cuma prefix-nya yang tetap.
-const LOCATION_TRIGGER_SELECTOR =
-  'div[role="button"][aria-label^="Lokasi:"], div[role="button"][aria-label^="Location:"]';
-
-// Input combobox di dalam modal "Ubah Lokasi" / "Edit Location".
-// Ini adalah selector yang SUDAH ADA sebelumnya di scraper ini
-// (terbukti bekerja), sekarang ditambah versi Bahasa Indonesia.
-const LOCATION_INPUT_SELECTOR =
-  'input[role="combobox"][aria-label="Lokasi"], input[role="combobox"][aria-label="Location"]';
-
-// Berapa lama bot menunggu modal "Ubah Lokasi" muncul setelah
-// tombol trigger diklik.
-const LOCATION_MODAL_TIMEOUT = 15_000;
-
-// Berapa lama bot mengecek apakah input lokasi SUDAH terbuka
-// sebelum mencoba klik tombol trigger (mis. modal kebetulan
-// masih terbuka dari sesi sebelumnya).
-const LOCATION_ALREADY_OPEN_CHECK_TIMEOUT = 3_000;
-
-/*
-|--------------------------------------------------------------------------
 | INPUT
 |--------------------------------------------------------------------------
 */
@@ -248,105 +192,6 @@ function saveErrors(errors) {
 
 /*
 |--------------------------------------------------------------------------
-| DETEKSI & BUKA INPUT LOKASI (OTOMATIS)
-|--------------------------------------------------------------------------
-|
-| Sebelumnya, user harus klik manual tombol "Lokasi" di sidebar
-| Marketplace, lalu klik kolom input di dalam modal "Ubah Lokasi",
-| baru scraper bisa mulai mengisi keyword.
-|
-| Fungsi-fungsi di bawah ini menggantikan langkah klik manual itu:
-| bot sendiri yang mencari tombol trigger, mengkliknya, menunggu
-| modal terbuka, lalu mencari kolom input di dalamnya.
-|
-| Login manual Facebook TETAP diperlukan (tidak diotomatisasi) —
-| ini cuma menghilangkan langkah klik filter lokasi setelah login.
-|
-*/
-
-/**
- * Mengecek apakah input lokasi SUDAH terlihat di layar tanpa
- * perlu klik apa pun. Berguna kalau modal "Ubah Lokasi" kebetulan
- * sudah terbuka (mis. sisa sesi sebelumnya, atau Facebook
- * langsung menampilkannya).
- *
- * Mengembalikan locator jika ditemukan, atau null jika tidak.
- */
-async function findAlreadyOpenLocationInput(page) {
-  const input = page.locator(LOCATION_INPUT_SELECTOR).first();
-
-  try {
-    await input.waitFor({
-      state: "visible",
-      timeout: LOCATION_ALREADY_OPEN_CHECK_TIMEOUT,
-    });
-
-    return input;
-  } catch {
-    // Belum ada / belum terlihat — nanti bot yang buka lewat trigger.
-    return null;
-  }
-}
-
-/**
- * Mencari & mengklik tombol trigger lokasi di sidebar
- * (mis. "Suruhan, Jawa Timur, Indonesia · Dalam 5 km"),
- * lalu menunggu modal "Ubah Lokasi" terbuka.
- */
-async function openLocationModal(page) {
-  const trigger = page.locator(LOCATION_TRIGGER_SELECTOR).first();
-
-  console.log("🔍 Mencari tombol filter lokasi di sidebar...");
-
-  await trigger.waitFor({
-    state: "visible",
-    timeout: LOCATION_MODAL_TIMEOUT,
-  });
-
-  console.log("🖱️ Klik tombol filter lokasi...");
-
-  await trigger.click();
-
-  console.log("⏳ Menunggu modal 'Ubah Lokasi' terbuka...");
-
-  const input = page.locator(LOCATION_INPUT_SELECTOR).first();
-
-  await input.waitFor({
-    state: "visible",
-    timeout: LOCATION_MODAL_TIMEOUT,
-  });
-
-  return input;
-}
-
-/**
- * Fungsi utama: memastikan input lokasi siap dipakai, dengan
- * urutan berikut —
- *
- * 1. Cek dulu apakah input sudah terbuka (tanpa klik apa pun).
- * 2. Kalau belum, cari & klik tombol trigger, lalu tunggu modal.
- *
- * Ini yang dipanggil dari main() menggantikan waitFor pasif
- * yang lama.
- */
-async function ensureLocationInput(page) {
-  const alreadyOpen = await findAlreadyOpenLocationInput(page);
-
-  if (alreadyOpen) {
-    console.log("✅ Input lokasi sudah terbuka, lanjut tanpa klik trigger.");
-
-    return alreadyOpen;
-  }
-
-  const input = await openLocationModal(page);
-
-  console.log("✅ Input Location ditemukan.");
-
-  return input;
-}
-
-/*
-|--------------------------------------------------------------------------
 | SCRAPE AUTOCOMPLETE
 |--------------------------------------------------------------------------
 */
@@ -441,6 +286,8 @@ async function scrapeWithRetry(page, locationInput, keyword) {
 */
 
 async function main() {
+  let browser;
+
   const results = [];
   const errors = [];
 
@@ -454,22 +301,20 @@ async function main() {
 
     console.log("");
     console.log("🚀 Menjalankan Chromium...");
-    console.log(`💾 Profil browser: ${USER_DATA_DIR}`);
 
-    // launchPersistentContext = browser + context jadi satu, dan
-    // datanya (cookies, login, dll) disimpan ke USER_DATA_DIR di disk.
-    // Ini menggantikan chromium.launch() + browser.newContext() yang
-    // lama, yang sesinya selalu hilang tiap browser ditutup.
-    const context = await chromium.launchPersistentContext(USER_DATA_DIR, {
+    browser = await chromium.launch({
       headless: false,
       slowMo: 50,
+    });
+
+    const context = await browser.newContext({
       viewport: {
         width: 1366,
         height: 768,
       },
     });
 
-    const page = context.pages()[0] ?? (await context.newPage());
+    const page = await context.newPage();
 
     await page.goto(FACEBOOK_URL, {
       waitUntil: "domcontentloaded",
@@ -477,14 +322,20 @@ async function main() {
     });
 
     console.log("✅ Marketplace terbuka.");
-    console.log("🔐 Login Facebook jika diperlukan (cukup sekali saja).");
+    console.log("🔐 Login Facebook jika diperlukan.");
 
     await page.waitForTimeout(5000);
 
-    // Sebelumnya user harus klik manual tombol filter Lokasi
-    // sebelum bagian ini bisa lanjut. Sekarang bot yang mencari
-    // & mengklik sendiri (lihat bagian "DETEKSI & BUKA INPUT LOKASI").
-    const locationInput = await ensureLocationInput(page);
+    const locationInput = page
+      .locator('input[role="combobox"][aria-label="Location"]')
+      .first();
+
+    await locationInput.waitFor({
+      state: "visible",
+      timeout: 60_000,
+    });
+
+    console.log("✅ Input Location ditemukan.");
 
     for (let i = 0; i < locations.length; i++) {
       const keyword = locations[i];
