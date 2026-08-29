@@ -75,6 +75,34 @@ const LOCATION_ALREADY_OPEN_CHECK_TIMEOUT = 3_000;
 
 /*
 |--------------------------------------------------------------------------
+| SELECTOR VERIFIKASI (APPLY + URL)
+|--------------------------------------------------------------------------
+|
+| Dipakai khusus untuk keyword dengan ≤ 2 hasil autocomplete —
+| lihat bagian "VERIFIKASI APPLY + URL" di bawah.
+|
+| CATATAN PENTING: tombol "Terapkan" / "Apply" belum pernah kita
+| lihat langsung markup-nya, jadi selector di bawah ini pakai
+| Playwright getByRole (role + accessible name) yang paling stabil
+| terhadap perubahan class CSS Facebook. Kalau saat live test
+| ternyata tombolnya tidak ketemu, INI yang pertama harus dicek —
+| tinggal sesuaikan APPLY_BUTTON_NAME atau ganti ke selector lain.
+|
+*/
+const APPLY_BUTTON_NAME = /Terapkan|Apply/i;
+
+// Berapa lama bot menunggu URL berubah setelah tombol Terapkan
+// diklik. Marketplace adalah SPA, jadi ini menunggu perubahan
+// URL (bukan full page reload).
+const URL_CHANGE_TIMEOUT = 10_000;
+
+// Batas jumlah hasil autocomplete supaya keyword ini masuk alur
+// verifikasi apply+URL. Kalau hasilnya lebih banyak dari ini,
+// verifikasi di-skip (cuma simpan data autocomplete seperti biasa).
+const VERIFY_MAX_RESULTS = 2;
+
+/*
+|--------------------------------------------------------------------------
 | INPUT
 |--------------------------------------------------------------------------
 */
@@ -221,13 +249,38 @@ async function loadLocations() {
 
   const csvText = fs.readFileSync(csvPath, "utf8");
   const locations = extractLocations(csvText);
-  const uniqueLocations = [...new Set(locations)];
+
+  // Dedupe case-insensitive: "Abar-Abir" dan "Abar-abir" adalah
+  // lokasi yang SAMA, cuma beda kapitalisasi (biasanya karena CSV
+  // diisi manual/gabungan dari beberapa sumber). Set biasa
+  // ([...new Set(...)]) case-sensitive, jadi dua penulisan itu
+  // lolos sebagai 2 entri berbeda dan bikin bot memproses (dan
+  // klik Terapkan) lokasi yang sama berkali-kali.
+  const seenKeys = new Set();
+  const uniqueLocations = [];
+
+  for (const location of locations) {
+    const key = location.trim().toLowerCase().replace(/\s+/g, " ");
+
+    if (!seenKeys.has(key)) {
+      seenKeys.add(key);
+      uniqueLocations.push(location);
+    }
+  }
 
   if (uniqueLocations.length === 0) {
     throw new Error("Tidak ada lokasi di dalam CSV.");
   }
 
+  const duplicateCount = locations.length - uniqueLocations.length;
+
   console.log(`📊 Total lokasi: ${uniqueLocations.length}`);
+
+  if (duplicateCount > 0) {
+    console.log(
+      `🧹 ${duplicateCount} baris duplikat (termasuk beda kapitalisasi) dibuang dari CSV.`,
+    );
+  }
 
   return uniqueLocations;
 }
@@ -365,9 +418,17 @@ async function scrapeAutocomplete(page, locationInput, keyword) {
   const options = page.locator('[role="option"]:visible');
   const count = await options.count();
 
-  console.log(`📋 Option ditemukan: ${count}`);
+  console.log(`📋 Option ditemukan (mentah): ${count}`);
 
   const results = [];
+
+  // Facebook kadang merender opsi autocomplete yang SAMA lebih dari
+  // sekali di DOM (mis. elemen lama belum benar-benar hilang saat
+  // yang baru muncul), jadi selector [role="option"]:visible bisa
+  // menghitung 1 lokasi sebagai 2 elemen berbeda. Kita dedupe
+  // berdasarkan isi (nama+detail) supaya hasil akhirnya tetap sesuai
+  // jumlah lokasi ASLI, bukan jumlah elemen DOM.
+  const seenSignatures = new Set();
 
   for (let i = 0; i < count; i++) {
     const option = options.nth(i);
@@ -387,10 +448,23 @@ async function scrapeAutocomplete(page, locationInput, keyword) {
       continue;
     }
 
-    results.push({
-      name: values[0] ?? "",
-      detail: values[1] ?? "",
-    });
+    const name = values[0] ?? "";
+    const detail = values[1] ?? "";
+    const signature = `${name}|||${detail}`.toLowerCase();
+
+    if (seenSignatures.has(signature)) {
+      continue;
+    }
+
+    seenSignatures.add(signature);
+
+    results.push({ name, detail });
+  }
+
+  if (count !== results.length) {
+    console.log(
+      `🧹 ${count - results.length} opsi duplikat (elemen DOM ganda) dibuang — hasil final: ${results.length}`,
+    );
   }
 
   return results;
@@ -436,6 +510,330 @@ async function scrapeWithRetry(page, locationInput, keyword) {
 
 /*
 |--------------------------------------------------------------------------
+| VERIFIKASI APPLY + URL (KHUSUS KEYWORD DENGAN ≤ 2 HASIL)
+|--------------------------------------------------------------------------
+|
+| Alur ini HANYA dijalankan kalau jumlah hasil autocomplete untuk
+| 1 keyword ≤ VERIFY_MAX_RESULTS (default 2). Kalau lebih banyak
+| dari itu, keyword tersebut di-skip dari alur ini sepenuhnya dan
+| cuma disimpan data autocomplete-nya saja (perilaku scraper lama,
+| tidak berubah) — logic percabangan ini ada di main().
+|
+| Untuk tiap hasil autocomplete yang diverifikasi:
+|   1. Buka lagi kolom lokasi, ketik ulang keyword (perlu diulang
+|      karena setelah "Terapkan" diklik, page refresh dan modal
+|      lama + locator lama jadi stale).
+|   2. Cari lagi opsi yang cocok (match by name+detail).
+|   3. Klik opsi tsb, lalu klik tombol Terapkan/Apply.
+|   4. Tunggu URL berubah, baca URL barunya. Facebook menyimpan
+|      data kota di URL pakai deretan angka yang konstan untuk
+|      kota yang sama.
+|   5. Kalau URL ini BELUM pernah dilihat sepanjang run ini →
+|      tandai "sukses dicek" (urlStatus: "new").
+|      Kalau URL SAMA dengan yang sudah pernah dicek sebelumnya →
+|      tandai "url sudah pernah dicek" (urlStatus: "duplicate").
+|
+*/
+
+/**
+ * Buka ulang kolom lokasi, ketik ulang keyword, tunggu autocomplete
+ * muncul lagi, lalu cari locator opsi yang cocok dengan target
+ * name+detail. Dipakai untuk re-locate opsi setelah locator lama
+ * jadi stale (mis. setelah page refresh akibat klik Terapkan).
+ */
+async function reopenAndFindOption(page, keyword, targetName, targetDetail) {
+  const locationInput = await ensureLocationInput(page);
+
+  await locationInput.click();
+  await locationInput.selectText();
+  await locationInput.fill("");
+  await locationInput.fill(keyword);
+
+  await page.waitForTimeout(AUTOCOMPLETE_WAIT);
+
+  const options = page.locator('[role="option"]:visible');
+  const count = await options.count();
+
+  for (let i = 0; i < count; i++) {
+    const option = options.nth(i);
+    const spans = option.locator("span");
+    const spanCount = await spans.count();
+    const values = [];
+
+    for (let j = 0; j < spanCount; j++) {
+      const text = (await spans.nth(j).innerText()).replace(/\s+/g, " ").trim();
+
+      if (text && !values.includes(text)) {
+        values.push(text);
+      }
+    }
+
+    const name = values[0] ?? "";
+    const detail = values[1] ?? "";
+
+    if (name === targetName && detail === targetDetail) {
+      return option;
+    }
+  }
+
+  return null;
+}
+
+/**
+ * Klik satu opsi autocomplete, klik tombol Terapkan/Apply, lalu
+ * tunggu URL berubah. Marketplace adalah SPA (biasanya tidak full
+ * reload), jadi kita pakai waitForURL berbasis fungsi, dengan
+ * fallback fixed-wait kalau URL tidak berubah dalam waktu yang
+ * diharapkan (supaya tetap lanjut, bukan gagal total).
+ */
+async function applyOptionAndGetUrl(page, optionLocator) {
+  const previousUrl = page.url();
+
+  console.log("🖱️ Klik opsi autocomplete...");
+  await optionLocator.click();
+
+  const applyButton = page
+    .getByRole("button", { name: APPLY_BUTTON_NAME })
+    .first();
+
+  console.log("🖱️ Klik tombol Terapkan/Apply...");
+  await applyButton.click();
+
+  console.log("⏳ Menunggu URL berubah (page refresh)...");
+
+  try {
+    await page.waitForURL((url) => url.href !== previousUrl, {
+      timeout: URL_CHANGE_TIMEOUT,
+    });
+  } catch {
+    // Fallback: kasih waktu tambahan lalu ambil URL apa adanya —
+    // lebih baik lanjut dengan URL yang mungkin belum 100% final
+    // daripada bikin seluruh keyword gagal.
+    await page.waitForTimeout(2000);
+  }
+
+  return page.url();
+}
+
+/**
+ * Baca teks biru "📍 <kota> · <radius>" yang tampil di pojok
+ * kanan-atas Marketplace setelah lokasi berhasil di-apply — ini
+ * adalah elemen yang SAMA dengan LOCATION_TRIGGER_SELECTOR (tombol
+ * yang bot klik untuk buka modal Ubah Lokasi), tapi sekarang kita
+ * baca teksnya untuk dijadikan "kota resmi/terverifikasi" dari
+ * hasil autocomplete yang baru saja di-apply.
+ *
+ * Dipanggil SETELAH applyOptionAndGetUrl() supaya labelnya sudah
+ * update ke lokasi yang baru.
+ */
+async function readActiveLocationLabel(page) {
+  const trigger = page.locator(LOCATION_TRIGGER_SELECTOR).first();
+
+  try {
+    await trigger.waitFor({ state: "visible", timeout: 8000 });
+
+    const rawText = (await trigger.innerText()).replace(/\s+/g, " ").trim();
+
+    // Formatnya biasanya "<kota> · <radius>" (mis. "Tulungagung · 65 km").
+    // Kalau suatu saat formatnya beda (tanpa "·"), rawText tetap
+    // disimpan utuh dan activeCity fallback ke rawText itu sendiri.
+    const [cityPart, radiusPart] = rawText
+      .split("·")
+      .map((part) => part?.trim());
+
+    return {
+      activeLocationLabel: rawText,
+      activeCity: cityPart || rawText || null,
+      activeRadius: radiusPart || null,
+    };
+  } catch (error) {
+    console.log(`⚠️ Tidak bisa membaca label lokasi aktif: ${error.message}`);
+
+    return {
+      activeLocationLabel: null,
+      activeCity: null,
+      activeRadius: null,
+    };
+  }
+}
+
+/**
+ * Bikin "tanda pengenal" unik dari 1 hasil autocomplete, gabungan
+ * nama + detail (termasuk teks "X orang pernah singgah di sini").
+ * Dua hasil autocomplete dengan signature yang sama = lokasi yang
+ * SAMA PERSIS, walaupun keyword pencariannya beda (mis. "Abar-Abir"
+ * vs "Abar-abir" menghasilkan signature yang identik).
+ */
+function buildOptionSignature(name, detail) {
+  const normalize = (value) =>
+    String(value ?? "")
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, " ");
+
+  return `${normalize(name)}|||${normalize(detail)}`;
+}
+
+/**
+ * Jalankan verifikasi apply+URL untuk semua hasil autocomplete
+ * 1 keyword (dipanggil hanya kalau jumlah hasil ≤ VERIFY_MAX_RESULTS).
+ *
+ * `seenUrls`       — Set URL yang sudah "sukses dicek" sepanjang run.
+ * `seenSignatures` — Map signature (nama+detail) -> URL yang sudah
+ *                     pernah di-APPLY sepanjang run. Dicek DULU
+ *                     sebelum klik apa pun, supaya lokasi yang
+ *                     sudah pernah diproses (mis. gara-gara CSV
+ *                     punya baris duplikat/beda kapitalisasi) tidak
+ *                     diklik Terapkan lagi — cukup dipakai ulang
+ *                     hasilnya.
+ */
+async function verifyOptionsWithUrl(
+  page,
+  keyword,
+  autocompleteResults,
+  seenUrls,
+  seenSignatures,
+) {
+  const verified = [];
+
+  for (let i = 0; i < autocompleteResults.length; i++) {
+    const item = autocompleteResults[i];
+
+    console.log(`🔎 Verifikasi opsi: ${item.name} (${item.detail})`);
+
+    const signature = buildOptionSignature(item.name, item.detail);
+
+    if (seenSignatures.has(signature)) {
+      const cached = seenSignatures.get(signature);
+
+      console.log(
+        `♻️ Lokasi "${item.name}" sudah pernah di-apply sebelumnya di run ini — skip klik Terapkan, pakai ulang URL: ${cached.url}`,
+      );
+
+      verified.push({
+        ...item,
+        url: cached.url,
+        urlStatus: "duplicate",
+        activeLocationLabel: cached.activeLocationLabel,
+        activeCity: cached.activeCity,
+        activeRadius: cached.activeRadius,
+      });
+
+      continue;
+    }
+
+    let option = null;
+
+    if (i === 0) {
+      // Opsi PERTAMA: dropdown autocomplete kemungkinan besar masih
+      // terbuka dari proses scrape sebelumnya (scrapeAutocomplete)
+      // untuk keyword yang sama persis — jadi TIDAK perlu ketik ulang
+      // keyword-nya lagi, cukup ambil opsi yang sedang tampil di
+      // layar. Ini yang sebelumnya bikin bot "mencari 2x" walau
+      // hasil autocomplete cuma 1.
+      const currentOptions = page.locator('[role="option"]:visible');
+      const stillOpen = (await currentOptions.count()) > 0;
+
+      if (stillOpen) {
+        option = currentOptions.nth(0);
+      }
+    }
+
+    if (!option) {
+      // Opsi ke-2 dst (dropdown pasti sudah tertutup karena page
+      // refresh akibat opsi sebelumnya di-apply), atau dropdown opsi
+      // pertama ternyata sudah keburu tertutup — baru di sini kita
+      // buka ulang kolom lokasi & ketik ulang keyword-nya.
+      try {
+        option = await reopenAndFindOption(
+          page,
+          keyword,
+          item.name,
+          item.detail,
+        );
+      } catch (error) {
+        console.error(`❌ Gagal membuka ulang kolom lokasi: ${error.message}`);
+
+        verified.push({
+          ...item,
+          url: null,
+          urlStatus: "error",
+          error: error.message,
+        });
+
+        continue;
+      }
+    }
+
+    if (!option) {
+      console.log(
+        `⚠️ Opsi "${item.name}" tidak ditemukan lagi saat dibuka ulang, skip verifikasi.`,
+      );
+
+      verified.push({
+        ...item,
+        url: null,
+        urlStatus: "not_found",
+      });
+
+      continue;
+    }
+
+    try {
+      const url = await applyOptionAndGetUrl(page, option);
+      const activeLocation = await readActiveLocationLabel(page);
+
+      if (seenUrls.has(url)) {
+        console.log(`♻️ URL sudah pernah dicek: ${url}`);
+
+        verified.push({
+          ...item,
+          url,
+          urlStatus: "duplicate",
+          ...activeLocation,
+        });
+      } else {
+        seenUrls.add(url);
+
+        console.log(`✅ URL baru, sukses dicek: ${url}`);
+
+        if (activeLocation.activeCity) {
+          console.log(`🏷️ Kota terverifikasi: ${activeLocation.activeCity}`);
+        }
+
+        verified.push({
+          ...item,
+          url,
+          urlStatus: "new",
+          ...activeLocation,
+        });
+      }
+
+      // Simpan signature -> data lengkap (url + label lokasi aktif)
+      // TERLEPAS dari baru/duplikat, supaya keyword lain yang
+      // menghasilkan opsi identik di masa depan (dalam run yang
+      // sama) bisa langsung skip klik Terapkan tapi tetap dapat
+      // data kota-nya.
+      seenSignatures.set(signature, { url, ...activeLocation });
+    } catch (error) {
+      console.error(
+        `❌ Gagal verifikasi opsi "${item.name}": ${error.message}`,
+      );
+
+      verified.push({
+        ...item,
+        url: null,
+        urlStatus: "error",
+        error: error.message,
+      });
+    }
+  }
+
+  return verified;
+}
+
+/*
+|--------------------------------------------------------------------------
 | MAIN
 |--------------------------------------------------------------------------
 */
@@ -443,6 +841,16 @@ async function scrapeWithRetry(page, locationInput, keyword) {
 async function main() {
   const results = [];
   const errors = [];
+
+  // URL yang sudah pernah "sukses dicek" sepanjang run ini —
+  // dipakai untuk dedupe di verifyOptionsWithUrl().
+  const seenUrls = new Set();
+
+  // Signature (nama+detail hasil autocomplete) yang sudah pernah
+  // di-APPLY sepanjang run ini — dicek SEBELUM klik Terapkan, biar
+  // lokasi yang sama (mis. gara-gara CSV ada baris duplikat/beda
+  // kapitalisasi) tidak diklik Terapkan berkali-kali.
+  const seenSignatures = new Map();
 
   try {
     console.log("");
@@ -481,11 +889,6 @@ async function main() {
 
     await page.waitForTimeout(5000);
 
-    // Sebelumnya user harus klik manual tombol filter Lokasi
-    // sebelum bagian ini bisa lanjut. Sekarang bot yang mencari
-    // & mengklik sendiri (lihat bagian "DETEKSI & BUKA INPUT LOKASI").
-    const locationInput = await ensureLocationInput(page);
-
     for (let i = 0; i < locations.length; i++) {
       const keyword = locations[i];
 
@@ -495,19 +898,49 @@ async function main() {
       console.log(`🔎 ${keyword}`);
       console.log("========================================");
 
+      // Dibuka ulang tiap iterasi (bukan sekali di luar loop seperti
+      // sebelumnya) karena verifyOptionsWithUrl() bisa membuat page
+      // refresh/navigasi, yang bikin locator lama jadi stale.
+      // ensureLocationInput() sendiri sudah murah kalau modal masih
+      // terbuka (cek dulu sebelum klik trigger lagi).
+      const locationInput = await ensureLocationInput(page);
+
       const response = await scrapeWithRetry(page, locationInput, keyword);
 
       if (response.success) {
+        let finalResults = response.results;
+
+        if (
+          response.results.length > 0 &&
+          response.results.length <= VERIFY_MAX_RESULTS
+        ) {
+          console.log(
+            `🧪 ${response.results.length} hasil (≤${VERIFY_MAX_RESULTS}) — lanjut ke verifikasi apply+URL...`,
+          );
+
+          finalResults = await verifyOptionsWithUrl(
+            page,
+            keyword,
+            response.results,
+            seenUrls,
+            seenSignatures,
+          );
+        } else {
+          console.log(
+            `⏭️ ${response.results.length} hasil (>${VERIFY_MAX_RESULTS}) — skip verifikasi apply+URL, simpan data autocomplete saja.`,
+          );
+        }
+
         const record = {
           keyword,
-          results: response.results,
-          resultCount: response.results.length,
+          results: finalResults,
+          resultCount: finalResults.length,
           status: "success",
         };
 
         results.push(record);
 
-        console.log(`✅ ${response.results.length} hasil`);
+        console.log(`✅ ${finalResults.length} hasil`);
       } else {
         const errorRecord = {
           keyword,

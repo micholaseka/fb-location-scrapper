@@ -1,34 +1,28 @@
-﻿Keyword,Name,Detail,Status
-61111,"Kabupaten Gresik, Jawa Timur 61111","Kabupaten Gresik, Jawa Timur · 1 orang pernah singgah di sini",success
-61111,"Kabupaten Gresik, Jawa Timur 61111","Kabupaten Gresik, Jawa Timur · 1 orang pernah singgah di sini",success
-61112,"Kabupaten Gresik, Jawa Timur 61112","Kabupaten Gresik, Jawa Timur · 0 orang pernah singgah di sini",success
-61112,"Kabupaten Gresik, Jawa Timur 61112","Kabupaten Gresik, Jawa Timur · 0 orang pernah singgah di sini",success
-61113,"Kabupaten Gresik, Jawa Timur 61113","Kabupaten Gresik, Jawa Timur · 0 orang pernah singgah di sini",success
-61113,"Kabupaten Gresik, Jawa Timur 61113","Kabupaten Gresik, Jawa Timur · 0 orang pernah singgah di sini",success
-61114,"Kabupaten Gresik, Jawa Timur 61114","Kabupaten Gresik, Jawa Timur · 2 orang pernah singgah di sini",success
-61114,"Kabupaten Gresik, Jawa Timur 61114","Kabupaten Gresik, Jawa Timur · 2 orang pernah singgah di sini",success
-61115,"Kabupaten Gresik, Jawa Timur 61115","Kabupaten Gresik, Jawa Timur · 0 orang pernah singgah di sini",success
-61115,"Kabupaten Gresik, Jawa Timur 61115","Kabupaten Gresik, Jawa Timur · 0 orang pernah singgah di sini",success
-61116,"Kabupaten Gresik, Jawa Timur 61116","Kabupaten Gresik, Jawa Timur · 0 orang pernah singgah di sini",success
-61116,"Kabupaten Gresik, Jawa Timur 61116","Kabupaten Gresik, Jawa Timur · 0 orang pernah singgah di sini",success
-61117,"Kabupaten Gresik, Jawa Timur 61117","Kabupaten Gresik, Jawa Timur · 0 orang pernah singgah di sini",success
-61117,"Kabupaten Gresik, Jawa Timur 61117","Kabupaten Gresik, Jawa Timur · 0 orang pernah singgah di sini",success
-61118,"Kabupaten Gresik, Jawa Timur 61118","Kabupaten Gresik, Jawa Timur · 0 orang pernah singgah di sini",success
-61118,"Kabupaten Gresik, Jawa Timur 61118","Kabupaten Gresik, Jawa Timur · 0 orang pernah singgah di sini",success
-61119,"Kota Surabaya, Jawa Timur 61119","Kota Surabaya, Jawa Timur · 1 orang pernah singgah di sini",success
-61119,"Kota Surabaya, Jawa Timur 61119","Kota Surabaya, Jawa Timur · 1 orang pernah singgah di sini",success
-61121,"Kota Surabaya, Jawa Timur 61121","Kota Surabaya, Jawa Timur · 1 orang pernah singgah di sini",success
-61121,"Kota Surabaya, Jawa Timur 61121","Kota Surabaya, Jawa Timur · 1 orang pernah singgah di sini",success
-61122,"Kabupaten Gresik, Jawa Timur 61122","Kabupaten Gresik, Jawa Timur · 1 orang pernah singgah di sini",success
-61122,"Kabupaten Gresik, Jawa Timur 61122","Kabupaten Gresik, Jawa Timur · 1 orang pernah singgah di sini",success
-61123,"Kabupaten Gresik, Jawa Timur 61123","Kabupaten Gresik, Jawa Timur · 1 orang pernah singgah di sini",success
-61123,"Kabupaten Gresik, Jawa Timur 61123","Kabupaten Gresik, Jawa Timur · 1 orang pernah singgah di sini",success
-61124,"Kebomas, East Java 61124","Kebomas, East Java · 1 orang pernah singgah di sini",success
-61124,"Kebomas, East Java 61124","Kebomas, East Java · 1 orang pernah singgah di sini",success
-61151,"Manyar, East Java 61151","Manyar, East Java · 2 orang pernah singgah di sini",success
-61151,"Manyar, East Java 61151","Manyar, East Java · 2 orang pernah singgah di sini",success
-61152,,,success
-61153,"Sidayu, East Java 61153","Sidayu, East Java · 0 orang pernah singgah di sini",success
-61153,"Sidayu, East Java 61153","Sidayu, East Java · 0 orang pernah singgah di sini",success
-61154,"Ujungpangkah, East Java 61154","Ujungpangkah, East Java · 0 orang pernah singgah di sini",success
-61154,"Ujungpangkah, East Java 61154","Ujungpangkah, East Java · 0 orang pernah singgah di sini",success
+﻿Keyword Dicari,Nama (Autocomplete),Detail (Autocomplete),Kota Terverifikasi,Radius,Status Scrape,Status URL,URL Marketplace
+Abar-Abir,"Abar-abir, East Java","Abar-abir, East Java · 4.287 orang pernah singgah di sini",Gresik,Dalam 1 kilometer,success,new,https://www.facebook.com/marketplace/103138949726557
+Ambeng Ambeng Watangrejo,,,,,success,,
+Araararedja,"Araararedja, East Java","Araararedja, East Java · 5 orang pernah singgah di sini",Gresik,Dalam 1 kilometer,success,duplicate,https://www.facebook.com/marketplace/103138949726557
+Asempapak,,,,,success,,
+Babakbawo,,,,,success,,
+Babaksari,,,,,success,,
+Babatan,"Babatan, Jawa Timur, Indonesia","Babatan, East Java · 11.055 orang pernah singgah di sini","Surabaya, Indonesia",Dalam 1 kilometer,success,new,https://www.facebook.com/marketplace/surabaya
+Babatan,"Babatan, Sumatera Selatan, Indonesia",Kota,"Babatan, Sumatera Selatan, Indonesia",Dalam 1 kilometer,success,new,https://www.facebook.com/marketplace/110440405648143
+Bakalan,Bakalan,"Bakalan, Central Java · 2.620 orang pernah singgah di sini",,,success,,
+Bakalan,Bakalan Krajan,"Bakalan Krajan, East Java · 4.479 orang pernah singgah di sini",,,success,,
+Bakalan,"Bakalan, Purwantoro","Bakalan, Central Java · 2.279 orang pernah singgah di sini",,,success,,
+Bakalan,"Bakalan, Central Java","Bakalan, Central Java · 6.952 orang pernah singgah di sini",,,success,,
+Bakalan,Bakalankrapyak,"Bakalankrapyak, Central Java · 1.508 orang pernah singgah di sini",,,success,,
+Bakung,Talang Bakung,"Talang Bakung, Jambi · 38.335 orang pernah singgah di sini",,,success,,
+Bakung,"Bakung, West Java","Bakung, West Java · 3.915 orang pernah singgah di sini",,,success,,
+Bakung,"Bakung, Lampung","Bakung, Lampung · 7.667 orang pernah singgah di sini",,,success,,
+Bakung,"Bakung, Teluk Betung Barat","Bakung, Lampung · 16.603 orang pernah singgah di sini",,,success,,
+Bakung,"Bakung, Jawa Barat, Indonesia",Kota,,,success,,
+Balekambang,"Balekambang, Kramat Jati","Balekambang, Jakarta · 1.091 orang pernah singgah di sini",,,success,,
+Balekambang,"Balekambang, West Java","Balekambang, West Java · 4.928 orang pernah singgah di sini",,,success,,
+Balekambang,"Balekambang, East Java","Balekambang, East Java · 11.188 orang pernah singgah di sini",,,success,,
+Balekambang,"Balekambang, Central Java","Balekambang, Central Java · 6.760 orang pernah singgah di sini",,,success,,
+Balikterus,,,,,success,,
+Balong Panggang,,,,,success,,
+Balongdinding,"Balongdinding, East Java","Balongdinding, East Java · 515 orang pernah singgah di sini","Babatan, Sumatera Selatan, Indonesia",Dalam 1 mil,success,duplicate,https://www.facebook.com/marketplace/103138949726557
+Balongjrambah,"Balongjrambah, East Java","Balongjrambah, East Java · 22 orang pernah singgah di sini",Gresik,Dalam 1 kilometer,success,duplicate,https://www.facebook.com/marketplace/103138949726557
+Balongmojo,Balongmojo,"Balongmojo, East Java · 484 orang pernah singgah di sini",Gresik,Dalam 1 mil,success,new,https://www.facebook.com/marketplace/111782712172463

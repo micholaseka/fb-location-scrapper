@@ -13,13 +13,29 @@
   <body>
     <div class="app">
       <header class="header">
-        <h1>FB Location Scrapper</h1>
-        <p>Facebook Marketplace Location Scraper</p>
+        <div class="header-brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+              <path
+                d="M12 2C7.58 2 4 5.58 4 10c0 5.25 6.5 11 7.3 11.68a1 1 0 0 0 1.4 0C13.5 21 20 15.25 20 10c0-4.42-3.58-8-8-8z"
+                fill="white"
+              />
+              <circle cx="12" cy="10" r="3.2" fill="#1877F2" />
+            </svg>
+          </span>
+
+          <div>
+            <h1>FB Location Scrapper</h1>
+            <p>Facebook Marketplace Location Scraper</p>
+          </div>
+        </div>
+
+        <span id="status" class="status-badge" data-status="idle">Siap</span>
       </header>
 
       <main>
         <section class="card">
-          <h2>Input CSV</h2>
+          <h2><span class="step-dot">1</span> Input CSV</h2>
 
           <div class="file-row">
             <input
@@ -29,7 +45,7 @@
               readonly
             />
 
-            <button id="selectCsv">Pilih CSV</button>
+            <button id="selectCsv" class="secondary">Pilih CSV</button>
           </div>
 
           <div class="buttons">
@@ -41,9 +57,7 @@
 
         <section class="card">
           <div class="section-title">
-            <h2>Progress</h2>
-
-            <span id="status"> Siap </span>
+            <h2><span class="step-dot">2</span> Progress</h2>
           </div>
 
           <div class="progress-container">
@@ -51,17 +65,17 @@
           </div>
 
           <div class="progress-info">
-            <span id="progressText"> 0 / 0 </span>
+            <span id="progressText">0 / 0 lokasi</span>
 
-            <span id="progressPercent"> 0% </span>
+            <span id="progressPercent">0%</span>
           </div>
         </section>
 
-        <section class="card">
-          <h2>Log Bot</h2>
+        <section class="card card-log">
+          <h2><span class="step-dot">3</span> Log Bot</h2>
 
           <div id="logContainer" class="log-container">
-            <div class="log">Sistem siap digunakan.</div>
+            <div class="log log-info">Sistem siap digunakan.</div>
           </div>
         </section>
       </main>

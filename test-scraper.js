@@ -15,7 +15,7 @@ try {
   const result = await runScraper(csvPath, {
     onProgress(progress) {
       console.log(
-        `[PROGRESS] ${progress.current}/${progress.total} - ${progress.keyword}`
+        `[PROGRESS] ${progress.current}/${progress.total} - ${progress.keyword}`,
       );
     },
   });
@@ -23,7 +23,6 @@ try {
   console.log("");
   console.log("TEST BERHASIL");
   console.log(result);
-
 } catch (error) {
   console.error("");
   console.error("TEST GAGAL");

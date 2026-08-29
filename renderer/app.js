@@ -17,8 +17,43 @@ const progressPercent = document.getElementById("progressPercent");
 const logContainer = document.getElementById("logContainer");
 
 // ========================================
+// STATUS BADGE
+// ========================================
+
+/*
+ * Set teks badge status SEKALIGUS warnanya. `state` menentukan
+ * warna lewat atribut data-status yang sudah didefinisikan di
+ * style.css (idle / ready / running / success / error / warning).
+ */
+function setStatus(text, state = "idle") {
+  status.textContent = text;
+  status.dataset.status = state;
+}
+
+// ========================================
 // LOG
 // ========================================
+
+/*
+ * Menentukan class warna 1 baris log berdasarkan emoji/kata kunci
+ * yang sudah dipakai scraper.js (✅ sukses, ❌ gagal/error,
+ * ⚠️ warning/skip, sisanya dianggap info netral).
+ */
+function classifyLog(line) {
+  if (/[✅🏁💾]/.test(line)) {
+    return "log-success";
+  }
+
+  if (/[❌]/.test(line) || /gagal|error/i.test(line)) {
+    return "log-error";
+  }
+
+  if (/[⚠️♻️]/.test(line)) {
+    return "log-warning";
+  }
+
+  return "log-info";
+}
 
 function addLog(message) {
   const lines = String(message)
@@ -28,7 +63,7 @@ function addLog(message) {
   for (const line of lines) {
     const log = document.createElement("div");
 
-    log.className = "log";
+    log.className = `log ${classifyLog(line)}`;
 
     const time = new Date().toLocaleTimeString();
 
@@ -49,7 +84,7 @@ function setProgress(current, total) {
 
   progressBar.style.width = `${percent}%`;
 
-  progressText.textContent = `${current} / ${total}`;
+  progressText.textContent = `${current} / ${total} lokasi`;
 
   progressPercent.textContent = `${percent}%`;
 }
@@ -102,7 +137,7 @@ selectCsv.addEventListener("click", async () => {
 
     csvPath.value = filePath;
 
-    status.textContent = "CSV siap";
+    setStatus("CSV siap", "ready");
 
     addLog(`✅ CSV dipilih: ${filePath}`);
   } catch (error) {
@@ -120,7 +155,7 @@ startButton.addEventListener("click", async () => {
   if (!csvPath.value) {
     addLog("⚠️ Pilih file CSV terlebih dahulu.");
 
-    status.textContent = "Pilih CSV";
+    setStatus("Pilih CSV", "warning");
 
     return;
   }
@@ -129,7 +164,7 @@ startButton.addEventListener("click", async () => {
 
   addLog(`📄 CSV: ${csvPath.value}`);
 
-  status.textContent = "Berjalan";
+  setStatus("Berjalan", "running");
 
   startButton.disabled = true;
 
@@ -144,7 +179,7 @@ startButton.addEventListener("click", async () => {
 
     addLog(`❌ Gagal menjalankan scraper: ${error.message}`);
 
-    status.textContent = "Error";
+    setStatus("Error", "error");
 
     startButton.disabled = false;
 
@@ -196,7 +231,7 @@ window.electronAPI.onFinished((result) => {
   stopButton.disabled = true;
 
   if (result.success) {
-    status.textContent = "Selesai";
+    setStatus("Selesai", "success");
 
     addLog("================================");
 
@@ -204,7 +239,7 @@ window.electronAPI.onFinished((result) => {
 
     addLog("================================");
   } else {
-    status.textContent = "Gagal";
+    setStatus("Gagal", "error");
 
     addLog(`❌ Scraper berhenti. Exit code: ${result.code}`);
   }
@@ -215,5 +250,7 @@ window.electronAPI.onFinished((result) => {
 // ========================================
 
 setProgress(0, 0);
+
+setStatus("Siap", "idle");
 
 addLog("🟢 Sistem siap digunakan.");
