@@ -6,14 +6,17 @@
   "main": "electron/main.cjs",
   "scripts": {
     "start": "electron electron/main.cjs",
-    "build:linux": "electron-builder --linux AppImage",
-    "build:win": "electron-builder --win nsis"
+    "postinstall": "npm run install:browsers",
+    "install:browsers": "cross-env PLAYWRIGHT_BROWSERS_PATH=0 playwright install chromium",
+    "build:linux": "electron-builder --linux AppImage --publish=never",
+    "build:win": "electron-builder --win nsis --publish=never"
   },
   "dependencies": {
     "csv-parse": "^7.0.2",
     "playwright": "^1.62.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "electron": "^44.0.0",
     "electron-builder": "^26.15.3"
   },
@@ -26,6 +29,9 @@
       "scraper.js",
       "csvWriter.js",
       "package.json"
+    ],
+    "asarUnpack": [
+      "node_modules/playwright-core/.local-browsers/**"
     ],
     "directories": {
       "output": "dist"
