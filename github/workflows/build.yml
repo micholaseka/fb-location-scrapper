@@ -1,0 +1,64 @@
+name: Build FB Location Scrapper
+
+# Jalan otomatis kalau ada tag versi baru (mis. v1.0.0), dan juga
+# bisa dipicu manual lewat tab "Actions" di GitHub tanpa perlu tag
+# dulu (workflow_dispatch) — enak buat testing.
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    strategy:
+      # fail-fast: false -> kalau build Linux gagal, build Windows
+      # tetap lanjut jalan (dan sebaliknya), jadi kita tetap dapat
+      # hasil dari platform yang berhasil.
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            build-script: build:linux
+            artifact-name: fb-location-scrapper-linux
+            artifact-path: dist/*.AppImage
+          - os: windows-latest
+            build-script: build:win
+            artifact-name: fb-location-scrapper-windows
+            artifact-path: dist/*.exe
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      # `npm ci` otomatis menjalankan hook "postinstall" di
+      # package.json, yang men-download Chromium versi platform
+      # runner ini (Linux di ubuntu-latest, Windows di
+      # windows-latest) langsung ke dalam node_modules — jadi
+      # binary Chromium-nya sudah "benar" sesuai OS target sejak
+      # awal, tidak perlu cross-compile apa pun.
+      - name: Install dependencies + Chromium
+        run: npm ci
+
+      # CSC_IDENTITY_AUTO_DISCOVERY=false -> supaya electron-builder
+      # tidak coba cari sertifikat code-signing (kita belum pakai
+      # sertifikat berbayar). Tanpa ini, build Windows kadang gagal
+      # karena electron-builder nyariin certificate yang tidak ada.
+      - name: Build installer
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: false
+        run: npm run ${{ matrix.build-script }}
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact-name }}
+          path: ${{ matrix.artifact-path }}
+          if-no-files-found: error
