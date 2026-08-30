@@ -94,21 +94,33 @@ ipcMain.handle("start-scraping", async (event, csvFilePath) => {
   console.log("SCRAPER:", scraperPath);
 
   /*
-   * Kita menggunakan executable Node,
-   * bukan Electron.
+   * Kita menggunakan executable Electron itu sendiri (process.execPath),
+   * BUKAN "node" dari sistem — user akhir tidak wajib install Node.js.
    *
-   * process.env.ELECTRON_RUN_AS_NODE
-   * mencegah child process dijalankan
-   * sebagai aplikasi Electron.
+   * ELECTRON_RUN_AS_NODE=1 membuat Electron menjalankan file yang
+   * diberikan sebagai script Node biasa (bukan membuka window Electron
+   * baru). Ini teknik standar buat Electron app yang perlu jalanin
+   * child script Node tanpa bergantung pada instalasi Node terpisah.
+   *
+   * Sebelumnya di sini pakai spawn("node", ...) yang cuma jalan kalau
+   * kebetulan ada Node.js ter-install di komputer user — di komputer
+   * "bersih" (tanpa Node) ini gagal dengan error "spawn node ENOENT".
    */
 
-  const nodeExecutable = process.env.NODE || "node";
+  // Folder tempat hasil (JSON/CSV/error) & profil browser disimpan.
+  // WAJIB folder yang bisa ditulis — folder aplikasi yang sudah
+  // di-package (app.asar) itu READ-ONLY, jadi tidak boleh dipakai
+  // sebagai cwd buat scraper.js menyimpan file.
+  const outputDir = app.getPath("userData");
 
-  scraperProcess = spawn(nodeExecutable, [scraperPath, csvFilePath], {
-    cwd: path.join(__dirname, ".."),
+  console.log("OUTPUT DIR:", outputDir);
+
+  scraperProcess = spawn(process.execPath, [scraperPath, csvFilePath], {
+    cwd: outputDir,
 
     env: {
       ...process.env,
+      ELECTRON_RUN_AS_NODE: "1",
     },
 
     stdio: ["ignore", "pipe", "pipe"],
