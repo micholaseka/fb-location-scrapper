@@ -580,11 +580,67 @@ async function reopenAndFindOption(page, keyword, targetName, targetDetail) {
 }
 
 /**
+ * Berapa lama bot menunggu tombol trigger lokasi terlihat lagi
+ * setelah Terapkan diklik, sebelum dianggap "macet" dan di-reload
+ * paksa oleh bot.
+ */
+const PAGE_READY_TIMEOUT = 10_000;
+
+// Maksimal berapa kali bot boleh reload paksa kalau halamannya
+// tetap macet, sebelum menyerah dan lanjut apa adanya.
+const MAX_RECOVERY_RELOADS = 2;
+
+/**
+ * Setelah "Terapkan" diklik, Facebook KADANG macet (transisi SPA-nya
+ * gagal, tampilannya kayak error server) dan cuma bisa normal lagi
+ * kalau di-refresh manual (F5) oleh user. Fungsi ini niruin refresh
+ * manual itu secara otomatis: kalau elemen kunci Marketplace (tombol
+ * trigger lokasi di pojok kanan-atas) belum muncul lagi dalam waktu
+ * wajar, bot reload halamannya sendiri — bisa lebih dari sekali —
+ * sampai halaman beneran termuat normal.
+ */
+async function waitForMarketplaceReady(page) {
+  for (let attempt = 0; attempt <= MAX_RECOVERY_RELOADS; attempt++) {
+    try {
+      await page
+        .locator(LOCATION_TRIGGER_SELECTOR)
+        .first()
+        .waitFor({ state: "visible", timeout: PAGE_READY_TIMEOUT });
+
+      return;
+    } catch {
+      if (attempt < MAX_RECOVERY_RELOADS) {
+        console.log(
+          `⚠️ Halaman kelihatan macet setelah Terapkan — reload otomatis (percobaan ${
+            attempt + 1
+          }/${MAX_RECOVERY_RELOADS})...`,
+        );
+
+        try {
+          await page.reload({
+            waitUntil: "domcontentloaded",
+            timeout: 30_000,
+          });
+        } catch (reloadError) {
+          console.log(`⚠️ Reload gagal: ${reloadError.message}`);
+        }
+      }
+    }
+  }
+
+  console.log(
+    "⚠️ Halaman masih belum termuat normal setelah beberapa kali reload, lanjut apa adanya.",
+  );
+}
+
+/**
  * Klik satu opsi autocomplete, klik tombol Terapkan/Apply, lalu
  * tunggu URL berubah. Marketplace adalah SPA (biasanya tidak full
  * reload), jadi kita pakai waitForURL berbasis fungsi, dengan
  * fallback fixed-wait kalau URL tidak berubah dalam waktu yang
- * diharapkan (supaya tetap lanjut, bukan gagal total).
+ * diharapkan (supaya tetap lanjut, bukan gagal total). Setelah itu
+ * dicek juga apakah halamannya beneran termuat normal (lihat
+ * waitForMarketplaceReady di atas) — kalau macet, di-reload otomatis.
  */
 async function applyOptionAndGetUrl(page, optionLocator) {
   const previousUrl = page.url();
@@ -611,6 +667,8 @@ async function applyOptionAndGetUrl(page, optionLocator) {
     // daripada bikin seluruh keyword gagal.
     await page.waitForTimeout(2000);
   }
+
+  await waitForMarketplaceReady(page);
 
   return page.url();
 }
